@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ResultList SYSTEM "iofData.dtd">
+ <ResultList status="snapshot">
+  <IOFVersion version="2.0.3"></IOFVersion>
+  <Event eventForm="IndSingleDay">
+   <EventId idManager="SWE" type="nat"></EventId>
+   <Name>Motions-OL Tullinge 16 aug</Name>
+   <EventClassification>
+    <EventClassificationId idManager="SWE" type="nat">4</EventClassificationId>
+    <Name>Närtävling</Name>
+   </EventClassification>
+   <StartDate>
+    <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+   </StartDate>
+   <FinishDate>
+    <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+   </FinishDate>
+   <Organiser>
+    <Club>
+     <ClubId idManager="SWE" type="nat">410</ClubId>
+     <Name>Tullinge SK</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+   </Organiser>
+   <EventRace>
+    <EventRaceId></EventRaceId>
+    <Name>Etapp 1</Name>
+    <RaceDate>
+     <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+     <Clock clockFormat="HH:MM:SS">08:00:00</Clock>
+    </RaceDate>
+   </EventRace>
+  </Event>
+  <ClassResult>
+   <ClassShortName>ÖM5</ClassShortName>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Ohlsson</Family>
+      <Given sequence="1">Kjell</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat"></PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">417</ClubId>
+     <Name>Söders SOL Tyresö</Name>
+     <ShortName>Söders SOL Tyresö</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">18:19:31</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:48:22</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:28:51</Time>
+     <ResultPosition>1</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>3</CourseVariationId>
+      <CourseLength>3300</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:48:13</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="M">
+     <PersonName>
+      <Family>Kihlström</Family>
+      <Given sequence="1">Anders</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat">8891</PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">410</ClubId>
+     <Name>Tullinge SK</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">17:43:59</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:15:57</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:31:58</Time>
+     <ResultPosition>2</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>3</CourseVariationId>
+      <CourseLength>3300</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:19:49</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Wennang</Family>
+      <Given sequence="1">Fred</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat"></PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat"></ClubId>
+     <Name>-</Name>
+     <ShortName>-</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">17:56:07</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:30:01</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:33:54</Time>
+     <ResultPosition>3</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>3</CourseVariationId>
+      <CourseLength>3300</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:29:52</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Gustavsson</Family>
+      <Given sequence="1">Karin</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat">1140</PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">252</ClubId>
+     <Name>Strängnäs-Malmby OL</Name>
+     <ShortName>Strängnäs-Malmby OL</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">17:56:09</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:30:04</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:33:55</Time>
+     <ResultPosition>4</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>3</CourseVariationId>
+      <CourseLength>3300</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:30:13</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Törnebom</Family>
+      <Given sequence="1">Tobias</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat"></PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat"></ClubId>
+     <Name>-</Name>
+     <ShortName>-</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">18:32:02</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">19:10:54</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:38:52</Time>
+     <ResultPosition>5</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>3</CourseVariationId>
+      <CourseLength>3300</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">19:10:50</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Hoffsten-Arkäng</Family>
+      <Given sequence="1">Magdalena</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat">28528</PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">410</ClubId>
+     <Name>Tullinge SK</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">18:11:50</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:53:49</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:41:59</Time>
+     <ResultPosition>6</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>3</CourseVariationId>
+      <CourseLength>3300</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:53:53</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Lundeqvist</Family>
+      <Given sequence="1">Karin</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat">1433</PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">161</ClubId>
+     <Name>OK Hällen</Name>
+     <ShortName>OK Hällen</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">17:41:55</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:34:46</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:52:51</Time>
+     <ResultPosition>7</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>3</CourseVariationId>
+      <CourseLength>3300</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:34:36</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+  </ClassResult>
+  <ClassResult>
+   <ClassShortName>ÖM3</ClassShortName>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Blomdahl</Family>
+      <Given sequence="1">Anneli</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat">28902</PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">410</ClubId>
+     <Name>Tullinge SK</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">18:11:07</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:43:30</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:32:23</Time>
+     <ResultPosition>1</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>1</CourseVariationId>
+      <CourseLength>3200</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:43:24</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Ohlsson</Family>
+      <Given sequence="1">Agneta</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat"></PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">606</ClubId>
+     <Name>Fredrikshofs IF Skid &amp; OK</Name>
+     <ShortName>Fredrikshofs IF Skid &amp; OK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">18:19:27</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:56:31</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:37:04</Time>
+     <ResultPosition>2</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>1</CourseVariationId>
+      <CourseLength>3200</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:57:11</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="M">
+     <PersonName>
+      <Family>Hatlen</Family>
+      <Given sequence="1">Filip</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat">50450</PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">410</ClubId>
+     <Name>Tullinge SK</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">18:09:20</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:53:47</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:44:27</Time>
+     <ResultPosition>3</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>1</CourseVariationId>
+      <CourseLength>3200</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:53:36</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Hersén</Family>
+      <Given sequence="1">Ingela</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat">17203</PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">410</ClubId>
+     <Name>Tullinge SK</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">17:48:17</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:46:22</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:58:05</Time>
+     <ResultPosition>4</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>1</CourseVariationId>
+      <CourseLength>3200</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:46:34</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="M">
+     <PersonName>
+      <Family>Forsberg</Family>
+      <Given sequence="1">Viktor</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat">50454</PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">410</ClubId>
+     <Name>Tullinge SK</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">18:16:36</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">19:16:26</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:59:50</Time>
+     <ResultPosition>5</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>1</CourseVariationId>
+      <CourseLength>3200</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">19:16:41</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Svensson</Family>
+      <Given sequence="1">Filip</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat"></PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat">410</ClubId>
+     <Name>Tullinge SK</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">18:16:34</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">19:16:25</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:59:51</Time>
+     <ResultPosition>6</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>1</CourseVariationId>
+      <CourseLength>3200</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">19:16:33</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Karlsson</Family>
+      <Given sequence="1">Kim</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat"></PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat"></ClubId>
+     <Name>-</Name>
+     <ShortName>-</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">17:27:27</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:30:35</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">01:03:08</Time>
+     <ResultPosition>7</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>1</CourseVariationId>
+      <CourseLength>3200</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:31:24</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+  </ClassResult>
+  <ClassResult>
+   <ClassShortName>ÖM4</ClassShortName>
+   <PersonResult>
+    <Person sex="F">
+     <PersonName>
+      <Family>Hurtig</Family>
+      <Given sequence="1">Ante</Given>
+     </PersonName>
+     <PersonId idManager="SWE" type="nat"></PersonId>
+    </Person>
+    <Club>
+     <ClubId idManager="SWE" type="nat"></ClubId>
+     <Name>-</Name>
+     <ShortName>-</ShortName>
+     <CountryId value="SWE"></CountryId>
+    </Club>
+    <Result>
+     <StartTime>
+      <Clock clockFormat="HH:MM:SS">17:27:39</Clock>
+     </StartTime>
+     <FinishTime>
+      <Clock clockFormat="HH:MM:SS">18:11:48</Clock>
+     </FinishTime>
+     <Time timeFormat="HH:MM:SS">00:44:09</Time>
+     <ResultPosition>1</ResultPosition>
+     <CompetitorStatus value="OK"></CompetitorStatus>
+     <CourseVariation>
+      <CourseVariationId>2</CourseVariationId>
+      <CourseLength>4900</CourseLength>
+     </CourseVariation>
+     <ModifyDate>
+      <Date dateFormat="YYYY-MM-SS">2011-08-16</Date>
+      <Clock clockFormat="HH:MM:SS">18:12:08</Clock>
+     </ModifyDate>
+    </Result>
+   </PersonResult>
+  </ClassResult>
+ </ResultList>
