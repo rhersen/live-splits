@@ -7,7 +7,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1"/>
     <meta name="HandheldFriendly" content="true"/>
-    <title>Resultat</title>
+    <title>Sträcktider</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/main.css"/>
     <meta name="layout" content="main"/>
 </head>
@@ -18,8 +18,11 @@
     <table>
         <c:forEach items="${c.list}" var="p">
             <tr>
-                <td>${p.name}</td>
-                <td class="time">${p.timeString}</td>
+                <td class="split">${p.name}</td>
+                <c:forEach items="${p.splitStrings}" var="s">
+                    <td class="split">${s}</td>
+                </c:forEach>
+                <td class="split">${p.timeString}</td>
             </tr>
         </c:forEach>
     </table>

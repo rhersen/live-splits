@@ -22,13 +22,6 @@ div.fullscreen {
     width: 100%;
 }
 
-a:link, a:visited, a:hover {
-    color: black;
-    font-size: 48px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 h1 {
     color: red;
     font-weight: normal;
@@ -121,18 +114,12 @@ td.errors input {
 
 table {
     border: 1px solid #ccc;
+    border-collapse: collapse;
     width: 100%;
-}
-tr.delayed {
-    border: 0;
-    color: orange;
 }
 tr {
     border: 0;
     color: black;
-}
-td.countdown {
-    text-align: right;
 }
 td, th {
     font: 24px verdana, arial, helvetica, sans-serif;
@@ -141,6 +128,12 @@ td, th {
 }
 
 td.time {
+    text-align: right;
+}
+
+td.split {
+    border: 1px solid black;
+    font: 12px verdana, arial, helvetica, sans-serif;
     text-align: right;
 }
 

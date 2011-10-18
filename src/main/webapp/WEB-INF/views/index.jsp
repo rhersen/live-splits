@@ -13,17 +13,16 @@
 </head>
 <body>
 
-<c:forEach items="${classes}" var="c">
-    <h2>${c.name}</h2>
-    <table>
-        <c:forEach items="${c.list}" var="p">
-            <tr>
-                <td>${p.name}</td>
-                <td class="time">${p.timeString}</td>
-            </tr>
-        </c:forEach>
-    </table>
-</c:forEach>
+<h2>Natt-KM för ungdomar 18 okt</h2>
+
+<ol>
+    <li>
+        <a href="r">Resultat</a>
+    </li>
+    <li>
+        <a href="s">Sträcktider</a>
+    </li>
+</ol>
 
 </body>
 </html>

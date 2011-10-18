@@ -23,20 +23,24 @@ import java.util.Collection;
 import java.util.Date;
 
 @Controller
-@RequestMapping(value = "/r")
 public class StationController implements ServletContextAware {
 
     @Autowired
     Parser parser;
     private ServletContext servletContext;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String getStatic(Model model) throws IOException, SAXException {
-//        URL url = new URL("http://mobilrt.sl.se/?tt=TRAIN&SiteId=" + id);
+    @RequestMapping(value = "/r", method = RequestMethod.GET)
+    public String getResults(Model model) throws IOException, SAXException {
         URL url = servletContext.getResource("/WEB-INF/result.xml");
-
         model.addAttribute("classes", parser.parse(new InputStreamReader(url.openStream(), "UTF-8")));
         return "results";
+    }
+
+    @RequestMapping(value = "/s", method = RequestMethod.GET)
+    public String getSplits(Model model) throws IOException, SAXException {
+        URL url = servletContext.getResource("/WEB-INF/result.xml");
+        model.addAttribute("classes", parser.parse(new InputStreamReader(url.openStream(), "UTF-8")));
+        return "splits";
     }
 
     public void setServletContext(ServletContext servletContext) {
