@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>se.cygni.ruhe</groupId>
-    <artifactId>online-results</artifactId>
-    <name>online-results</name>
+    <artifactId>live-splits</artifactId>
+    <name>live-splits</name>
     <packaging>war</packaging>
     <version>0.1</version>
     <properties>
