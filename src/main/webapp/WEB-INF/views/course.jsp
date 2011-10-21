@@ -7,26 +7,20 @@
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1"/>
     <meta name="HandheldFriendly" content="true"/>
-    <title>Resultat</title>
+    <title>Sträcktider</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/main.css"/>
     <meta name="layout" content="main"/>
 </head>
 <body>
 
-<c:forEach items="${classes}" var="c">
-    <h2>${c.name}</h2>
-    <table>
-        <c:forEach items="${c.list}" var="p">
-            <tr>
-                <td>${p.id}</td>
-                <td>
-                    <a href="c?id=${p.id}">${p.name}</a>
-                </td>
-                <td class="time">${p.timeString}</td>
-            </tr>
-        </c:forEach>
-    </table>
-</c:forEach>
+<h2>${competitor}</h2>
+<ol>
+    <c:forEach items="${competitor.splits}" var="split">
+        <li>
+            ${split.time} ${split.control}
+        </li>
+    </c:forEach>
+</ol>
 
 </body>
 </html>

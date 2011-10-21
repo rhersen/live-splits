@@ -1,13 +1,14 @@
 package se.cygni.ruhe.sl;
 
+import org.apache.commons.collections.ListUtils;
 import org.apache.commons.collections.Predicate;
 import org.apache.commons.collections.Transformer;
-import org.apache.commons.collections.functors.NotNullPredicate;
 import org.apache.xerces.parsers.DOMParser;
 import org.joda.time.Period;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 import org.springframework.stereotype.Service;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
@@ -27,27 +28,48 @@ public class Parser {
 
     private PeriodFormatter periodParser;
 
-    public List<ClassResult> parse(InputStreamReader html) throws IOException, SAXException {
-        DOMParser neko = new DOMParser();
-        neko.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
-        neko.parse(new InputSource(html));
-
-        return getResults(neko);
+    public List<ClassResult> parseResultList(InputStreamReader xml, List controls) throws IOException, SAXException {
+        DOMParser p = new DOMParser();
+        p.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        p.parse(new InputSource(xml));
+        return getClassResults(p, controls);
     }
 
-    private List<ClassResult> getResults(DOMParser neko) {
-        NodeList classResults = neko.getDocument().getElementsByTagName("ClassResult");
-        return (List<ClassResult>) collect(getChildren(classResults), classResultTransformer());
+    public List parseCourseData(InputStreamReader xml) throws IOException, SAXException {
+        DOMParser p = new DOMParser();
+        p.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        p.parse(new InputSource(xml));
+        return getControls(p);
     }
 
-    private Transformer classResultTransformer() {
+    private List<ClassResult> getClassResults(DOMParser p, List<Control> controls) {
+        NodeList classResults = p.getDocument().getElementsByTagName("ClassResult");
+        return (List<ClassResult>) collect(getChildren(classResults), classResultTransformer(controls));
+    }
+
+    private List<Control> getControls(DOMParser p) {
+        NodeList courseDatas = p.getDocument().getElementsByTagName("CourseData");
+        Node courseData = getChildren(courseDatas).iterator().next();
+        Collection<Node> children = getChildren(courseData);
+        List controlCodes = findControls(children, "Control", "ControlCode");
+        List startPointCodes = findControls(children, "StartPoint", "StartPointCode");
+        List finishPointCodes = findControls(children, "FinishPoint", "FinishPointCode");
+        return ListUtils.union(ListUtils.union(startPointCodes, controlCodes), finishPointCodes);
+    }
+
+    private List<Control> findControls(Collection<Node> children, String parent, String child) {
+        Collection controls = select(children, hasNodeName(parent));
+        return (List) collect(controls, controlTransformer(child));
+    }
+
+    private Transformer classResultTransformer(final List<Control> controls) {
         return new Transformer() {
             public Object transform(Object o) {
                 Node node = (Node) o;
                 ClassResult r = new ClassResult();
                 r.setName(getChild(node, "ClassShortName").getFirstChild().getTextContent());
                 Collection personResults = select(getChildren(node), hasNodeName("PersonResult"));
-                r.setList((List<Competitor>) collect(personResults, competitorTransformer()));
+                r.setList((List<Competitor>) collect(personResults, competitorTransformer(controls)));
                 return r;
             }
         };
@@ -66,19 +88,20 @@ public class Parser {
         periodParser = new PeriodFormatterBuilder().appendHours().appendLiteral(":").appendMinutes().appendLiteral(":").appendSeconds().toFormatter();
     }
 
-    private Transformer competitorTransformer() {
+    private Transformer competitorTransformer(final List<Control> controls) {
         return new Transformer() {
             public Object transform(Object o) {
                 Node result = getChild((Node) o, "Result");
                 Node node = getChild((Node) o, "Person");
                 Competitor r = new Competitor();
                 r.setName(createName(getChild(node, "PersonName")));
+                r.setId(getChild(node, "PersonId").getTextContent());
                 String time = createTime(getChild(result, "Time"));
                 if (time != null) {
                     r.setTime(createPeriod(time));
                 }
                 r.setStatus(getChild(result, "CompetitorStatus").getAttributes().getNamedItem("value").getTextContent());
-                r.setSplits(getSplits(result));
+                r.setSplits(getSplits(result, controls));
                 return r;
             }
         };
@@ -88,35 +111,44 @@ public class Parser {
         return Period.parse(time, periodParser);
     }
 
-    private Transformer periodTransformer() {
+    private Transformer splitTransformer(final List<Control> controls) {
         return new Transformer() {
             public Object transform(Object o) {
-                String time = (String) o;
-                return Period.parse(time, periodParser);
+                Node splitTime = (Node) o;
+                Node time = getChild(splitTime, "Time");
+                Node controlCode = getChild(splitTime, "ControlCode");
+                if (time == null) {
+                    return null;
+                }
+                Control control = findControl(controlCode.getTextContent(), controls);
+                return new Split(Period.parse(time.getTextContent(), periodParser), control);
             }
         };
     }
 
-    private List getSplits(Node result) {
-        Collection times = collect(select(getChildren(result), hasNodeName("SplitTime")), childTransformer("Time"));
-        Collection strings = collect(select(times, NotNullPredicate.getInstance()), textTransformer());
-        return (List) collect(strings, periodTransformer());
-    }
-
-    private Transformer textTransformer() {
-        return new Transformer() {
-            public Object transform(Object o) {
-                Node n = (Node) o;
-                return n.getFirstChild().getTextContent();
+    private Control findControl(String controlCode, List<Control> controls) {
+        for (Control control : controls) {
+            if (control.getCode().equals(controlCode)) {
+                return control;
             }
-        };
+        }
+        throw new IllegalStateException(controlCode + " not found in " + controls);
     }
 
-    private Transformer childTransformer(final String name) {
+    private List getSplits(Node result, List<Control> controls) {
+        Collection splitTimes = select(getChildren(result), hasNodeName("SplitTime"));
+        return (List) collect(splitTimes, splitTransformer(controls));
+    }
+
+    private Transformer controlTransformer(final String name) {
         return new Transformer() {
             public Object transform(Object o) {
                 Node n = (Node) o;
-                return getChild(n, name);
+                String code = getChild(n, name).getFirstChild().getTextContent().trim();
+                NamedNodeMap attributes = getChild(n, "ControlPosition").getAttributes();
+                String x = attributes.getNamedItem("x").getTextContent();
+                String y = attributes.getNamedItem("y").getTextContent();
+                return new Control(code, Double.parseDouble(x), Double.parseDouble(y));
             }
         };
     }
@@ -151,5 +183,4 @@ public class Parser {
         }
         return r;
     }
-
 }

@@ -1,5 +1,6 @@
 package se.cygni.ruhe.sl;
 
+import org.joda.time.Period;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
@@ -10,6 +11,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ParserTest {
 
@@ -22,7 +24,7 @@ public class ParserTest {
 
     @Test
     public void result() throws Exception {
-        List<ClassResult> classes = testParse("result.xml");
+        List<ClassResult> classes = testParseResultList("result.xml");
         assertEquals(3, classes.size());
 
         ClassResult m5 = classes.get(0);
@@ -39,39 +41,67 @@ public class ParserTest {
     
     @Test
     public void splits() throws Exception {
-        List<ClassResult> classes = testParse("splits.xml");
-        assertEquals(4, classes.size());
+        List<ClassResult> classes = testParseResultList("splits.xml");
+        assertEquals(9, classes.size());
 
-        ClassResult m5 = classes.get(0);
-        assertEquals("Korta", m5.getName());
-        assertEquals("Olle Andersson", m5.getList().get(2).getName());
-        assertEquals("50" + "." + "00", m5.getList().get(3).getTimeString());
-        assertEquals("Magdalena van de Voorde", m5.getList().get(5).getName());
-        assertEquals("51.30", m5.getList().get(5).getTimeString());
-        assertEquals("Alexandra Lengquist", m5.getList().get(6).getName());
-        assertEquals("MisPunch", m5.getList().get(6).getTimeString());
+        ClassResult h16 = classes.get(0);
+        assertEquals("H16", h16.getName());
+        assertEquals("Niklas Sundqvist", h16.getList().get(2).getName());
+        assertEquals("41.47", h16.getList().get(3).getTimeString());
+        assertEquals("Emil Andersson", h16.getList().get(4).getName());
+        assertEquals("45.40", h16.getList().get(4).getTimeString());
 
-        ClassResult m3 = classes.get(1);
-        assertEquals("Mellan", m3.getName());
-        assertEquals("Andreas Hultqvist", m3.getList().get(0).getName());
-        assertEquals("51.01", m3.getList().get(0).getTimeString());
-        assertEquals("Emil Andersson", m3.getList().get(2).getName());
-        assertEquals("Daniel Bengtsson", m3.getList().get(9).getName());
-        assertEquals("1.03.39", m3.getList().get(9).getTimeString());
-        assertEquals("Staffan Persson", m3.getList().get(11).getName());
-        assertEquals("1.00.04", m3.getList().get(11).getSplitStrings().get(9));
+        ClassResult d16 = classes.get(1);
+        assertEquals("D16", d16.getName());
+        assertEquals("Alexandra Lengquist", d16.getList().get(2).getName());
+        assertEquals("Elsa Rajala", d16.getList().get(3).getName());
+        assertEquals("MisPunch", d16.getList().get(3).getTimeString());
 
         ClassResult l = classes.get(3);
-        assertEquals("Sina Tommer", l.getList().get(2).getName());
-        Competitor competitor = l.getList().get(0);
+        assertEquals("Ebba Leickt", l.getList().get(2).getName());
+        Competitor competitor = l.getList().get(1);
         assertEquals("Amanda Berggren", competitor.getName());
-        assertEquals("31.29", competitor.getTimeString());
-        assertEquals("11.17", competitor.getSplitStrings().get(0));
+        assertEquals("26.02", competitor.getTimeString());
+        assertEquals("11.52", competitor.getSplitStrings().get(3));
+    }
+    @Test
+    public void splitsShouldHaveControls() throws Exception {
+        List<ClassResult> classes = testParseResultList("splits.xml");
+        assertEquals(9, classes.size());
+
+        ClassResult d10 = classes.get(4);
+        assertEquals("Klara Bolin", d10.getList().get(0).getName());
+        Competitor competitor = d10.getList().get(1);
+        assertEquals("Tilda Andersson", competitor.getName());
+        assertEquals("23493", competitor.getId());
+        assertEquals("20.05", competitor.getTimeString());
+        assertEquals("10.35", competitor.getSplitStrings().get(3));
+        Split split = (Split) competitor.getSplits().get(3);
+        assertEquals(new Period("PT10M35S"), split.getTime());
+        assertEquals("10.35", split.getTimeString());
+        Control control = split.getControl();
+        assertEquals("55", control.getCode());
     }
 
-    private List<ClassResult> testParse(String file) throws IOException, SAXException {
+    @Test
+    public void courses() throws Exception {
+        List controls = testParseCourseData("courses.xml");
+        assertEquals(28, controls.size());
+        Control first = (Control) controls.get(1);
+        assertEquals("31", first.getCode());
+        assertTrue(first.getX() > 0);
+        assertTrue(first.getY() > 0);
+        assertEquals("S1", ((Control) controls.get(0)).getCode());
+        assertEquals("M1", ((Control) controls.get(27)).getCode());
+    }
+
+    private List<ClassResult> testParseResultList(String file) throws IOException, SAXException {
         InputStream stream = getClass().getResourceAsStream("/" + file);
-        return target.parse(new InputStreamReader(stream, "UTF-8"));
+        return target.parseResultList(new InputStreamReader(stream, "UTF-8"), testParseCourseData("courses.xml"));
+    }
+    private List testParseCourseData(String file) throws IOException, SAXException {
+        InputStream stream = getClass().getResourceAsStream("/" + file);
+        return target.parseCourseData(new InputStreamReader(stream, "UTF-8"));
     }
 
 }

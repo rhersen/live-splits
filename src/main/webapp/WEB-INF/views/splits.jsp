@@ -19,8 +19,8 @@
         <c:forEach items="${c.list}" var="p">
             <tr>
                 <td class="split">${p.name}</td>
-                <c:forEach items="${p.splitStrings}" var="s">
-                    <td class="split">${s}</td>
+                <c:forEach items="${p.splits}" var="s">
+                    <td class="split">${s.timeString}</td>
                 </c:forEach>
                 <td class="split">${p.timeString}</td>
             </tr>

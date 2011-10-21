@@ -15,6 +15,7 @@ public class Competitor {
     private String status;
     private List splits;
     private PeriodFormatter formatter;
+    private String id;
 
     public String getName() {
         return name;
@@ -82,9 +83,17 @@ public class Competitor {
     private Transformer periodToString() {
         return new Transformer() {
             public Object transform(Object o) {
-                Period split = (Period) o;
-                return split.toString(formatter);
+                Split split = (Split) o;
+                return split.getTime().toString(formatter);
             }
         };
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
