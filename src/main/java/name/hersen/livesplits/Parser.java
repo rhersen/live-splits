@@ -1,4 +1,4 @@
-package se.cygni.ruhe.sl;
+package name.hersen.livesplits;
 
 import org.apache.commons.collections.ListUtils;
 import org.apache.commons.collections.Predicate;

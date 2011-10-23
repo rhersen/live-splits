@@ -1,4 +1,4 @@
-package se.cygni.ruhe.sl;
+package name.hersen.livesplits;
 
 import org.apache.commons.collections.Transformer;
 import org.joda.time.Period;

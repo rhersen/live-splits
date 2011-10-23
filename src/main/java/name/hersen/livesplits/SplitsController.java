@@ -1,4 +1,4 @@
-package se.cygni.ruhe.sl;
+package name.hersen.livesplits;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

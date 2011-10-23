@@ -1,4 +1,4 @@
-package se.cygni.ruhe.sl;
+package name.hersen.livesplits;
 
 public class Control {
     private String code;

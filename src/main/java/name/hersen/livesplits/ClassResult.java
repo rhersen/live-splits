@@ -1,6 +1,5 @@
-package se.cygni.ruhe.sl;
+package name.hersen.livesplits;
 
-import java.lang.reflect.Field;
 import java.util.List;
 
 public class ClassResult {
