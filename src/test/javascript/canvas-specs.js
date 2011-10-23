@@ -33,7 +33,7 @@ describe('canvas', function() {
             measureText: width(200)
         };
 
-        expect(calls).toBe(0);
+        expect(calls).toBe(1);
     });
 
 });
