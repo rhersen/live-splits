@@ -1,6 +1,5 @@
 package name.hersen.livesplits;
 
-import org.joda.time.Period;
 import org.junit.Before;
 import org.junit.Test;
 import org.xml.sax.SAXException;
@@ -30,8 +29,9 @@ public class ParserTest {
         ClassResult m5 = classes.get(0);
         assertEquals("ÖM5", m5.getName());
         assertEquals("Kjell Ohlsson", m5.getList().get(0).getName());
-        assertEquals("Fred Wennang", m5.getList().get(2).getName());
-        assertEquals("33.54", m5.getList().get(2).getTimeString());
+        FormattedCompetitor competitor = m5.getList().get(2);
+        assertEquals("Fred Wennang", competitor.getName());
+        assertEquals("33.54", competitor.getTime());
 
         ClassResult m3 = classes.get(1);
         assertEquals("ÖM3", m3.getName());
@@ -47,22 +47,22 @@ public class ParserTest {
         ClassResult h16 = classes.get(0);
         assertEquals("H16", h16.getName());
         assertEquals("Niklas Sundqvist", h16.getList().get(2).getName());
-        assertEquals("41.47", h16.getList().get(3).getTimeString());
+        assertEquals("41.47", h16.getList().get(3).getTime());
         assertEquals("Emil Andersson", h16.getList().get(4).getName());
-        assertEquals("45.40", h16.getList().get(4).getTimeString());
+        assertEquals("45.40", h16.getList().get(4).getTime());
 
         ClassResult d16 = classes.get(1);
         assertEquals("D16", d16.getName());
         assertEquals("Alexandra Lengquist", d16.getList().get(2).getName());
         assertEquals("Elsa Rajala", d16.getList().get(3).getName());
-        assertEquals("MisPunch", d16.getList().get(3).getTimeString());
+        assertEquals("MisPunch", d16.getList().get(3).getTime());
 
         ClassResult l = classes.get(3);
         assertEquals("Ebba Leickt", l.getList().get(2).getName());
-        Competitor competitor = l.getList().get(1);
+        FormattedCompetitor competitor = l.getList().get(1);
         assertEquals("Amanda Berggren", competitor.getName());
-        assertEquals("26.02", competitor.getTimeString());
-        assertEquals("11.52", competitor.getSplitStrings().get(3));
+        assertEquals("26.02", competitor.getTime());
+        assertEquals("11.52", competitor.getSplits().get(3).getTime());
     }
     @Test
     public void splitsShouldHaveControls() throws Exception {
@@ -71,14 +71,13 @@ public class ParserTest {
 
         ClassResult d10 = classes.get(4);
         assertEquals("Klara Bolin", d10.getList().get(0).getName());
-        Competitor competitor = d10.getList().get(1);
+        FormattedCompetitor competitor = d10.getList().get(1);
         assertEquals("Tilda Andersson", competitor.getName());
         assertEquals("23493", competitor.getId());
-        assertEquals("20.05", competitor.getTimeString());
-        assertEquals("10.35", competitor.getSplitStrings().get(3));
-        Split split = (Split) competitor.getSplits().get(3);
-        assertEquals(new Period("PT10M35S"), split.getTime());
-        assertEquals("10.35", split.getTimeString());
+        assertEquals("20.05", competitor.getTime());
+        assertEquals("10.35", competitor.getSplits().get(3).getTime());
+        FormattedSplit split = competitor.getSplits().get(3);
+        assertEquals("10.35", split.getTime());
         Control control = split.getControl();
         assertEquals("55", control.getCode());
     }

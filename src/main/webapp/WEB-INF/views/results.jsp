@@ -22,7 +22,7 @@
                 <td>
                     <a href="c?id=${p.id}">${p.name}</a>
                 </td>
-                <td class="time">${p.timeString}</td>
+                <td class="time">${p.time}</td>
             </tr>
         </c:forEach>
     </table>

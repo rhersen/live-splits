@@ -20,9 +20,9 @@
             <tr>
                 <td class="split">${p.name}</td>
                 <c:forEach items="${p.splits}" var="s">
-                    <td class="split">${s.timeString}</td>
+                    <td class="split">${s.time}</td>
                 </c:forEach>
-                <td class="split">${p.timeString}</td>
+                <td class="split">${p.time}</td>
             </tr>
         </c:forEach>
     </table>

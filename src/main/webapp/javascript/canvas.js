@@ -10,13 +10,26 @@ function getMillisSinceUpdate() {
     return getMillisSinceRefresh(state.currentDate, getMillisFromMidnight(state.updated));
 }
 
-function init(id, direction) {
+function draw(context, competitor) {
+    context.fillText(competitor.timeString, 120, 120);
+}
+
+function init(id) {
     var canvas = getCanvas();
-    setInterval(run, 256);
+    run();
     window.onresize = handleResize;
     handleResize();
 
     function run() {
+        $.ajax({url: "splits?id=" + id, cache: false, success: handleSuccess, error: handleError});
+    }
+
+    function handleSuccess(x) {
+        draw(getContext(), x);
+    }
+    
+    function handleError(x) {
+        alert(x);
     }
 
     function handleResize() {

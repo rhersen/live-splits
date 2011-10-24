@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.ServletContextAware;
 import org.xml.sax.SAXException;
 
@@ -37,15 +38,22 @@ public class SplitsController implements ServletContextAware {
     @RequestMapping(value = "/c", method = RequestMethod.GET)
     public String getCompetitor(@RequestParam String id, Model model) throws IOException, SAXException {
         List<ClassResult> classResults = parseSplits();
+        model.addAttribute("id", id);
         model.addAttribute("competitor", findCompetitor(id, classResults));
         model.addAttribute("classes", classResults);
         return "course";
     }
 
-    private Competitor findCompetitor(String id, List<ClassResult> classResults) {
+    @RequestMapping(value = "/splits", method = RequestMethod.GET)
+    @ResponseBody
+    public FormattedCompetitor getSplits(@RequestParam String id) throws IOException, SAXException {
+        return findCompetitor(id, parseSplits());
+    }
+
+    private FormattedCompetitor findCompetitor(String id, List<ClassResult> classResults) {
         for (ClassResult classResult : classResults) {
-            List<Competitor> competitors = classResult.getList();
-            for (Competitor competitor : competitors) {
+            List<FormattedCompetitor> competitors = classResult.getList();
+            for (FormattedCompetitor competitor : competitors) {
                 if (competitor.getId().equals(id)) {
                     return competitor;
                 }

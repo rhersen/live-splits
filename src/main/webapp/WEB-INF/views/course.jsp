@@ -9,18 +9,14 @@
     <meta name="HandheldFriendly" content="true"/>
     <title>Sträcktider</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/main.css"/>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/javascript/canvas.js"></script>
     <meta name="layout" content="main"/>
 </head>
-<body>
-
-<h2>${competitor}</h2>
-<ol>
-    <c:forEach items="${competitor.splits}" var="split">
-        <li>
-            ${split.time} ${split.control}
-        </li>
-    </c:forEach>
-</ol>
-
+<body onload="init(${id});">
+<div class="fullscreen">
+    <canvas>
+    </canvas>
+</div>
 </body>
 </html>

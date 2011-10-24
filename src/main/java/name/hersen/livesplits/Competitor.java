@@ -1,20 +1,17 @@
 package name.hersen.livesplits;
 
-import org.apache.commons.collections.Transformer;
 import org.joda.time.Period;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import static org.apache.commons.collections.CollectionUtils.collect;
 
 public class Competitor {
     private String name;
     private Period time;
     private String status;
     private List splits;
-    private PeriodFormatter formatter;
     private String id;
 
     public String getName() {
@@ -38,7 +35,7 @@ public class Competitor {
     }
 
     public Competitor() {
-        formatter = new PeriodFormatterBuilder()
+        PeriodFormatter formatter = new PeriodFormatterBuilder()
                 .appendHours()
                 .appendSeparatorIfFieldsBefore(".")
                 .minimumPrintedDigits(2)
@@ -48,14 +45,6 @@ public class Competitor {
                 .printZeroAlways()
                 .appendSeconds()
                 .toFormatter();
-    }
-
-    public String getTimeString() {
-        if (time != null) {
-            return time.toString(formatter);
-        } else {
-            return status;
-        }
     }
 
     public void setTime(Period period) {
@@ -75,25 +64,23 @@ public class Competitor {
         this.splits = splits;
     }
 
-
-    public List getSplitStrings() {
-        return (List) collect(splits, periodToString());
-    }
-
-    private Transformer periodToString() {
-        return new Transformer() {
-            public Object transform(Object o) {
-                Split split = (Split) o;
-                return split.getTime().toString(formatter);
-            }
-        };
-    }
-
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    @SuppressWarnings({"unchecked"})
+    public FormattedCompetitor format() {
+        List<FormattedSplit> formattedSplits = new ArrayList<FormattedSplit>();
+        List<Split> splitList = getSplits();
+        for (Split split : splitList) {
+            if (split != null) {
+                formattedSplits.add(split.format());
+            }
+        }
+        return new FormattedCompetitor(getId(), getName(), getTime(), status, formattedSplits);
     }
 }

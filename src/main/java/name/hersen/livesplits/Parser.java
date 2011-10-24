@@ -69,7 +69,7 @@ public class Parser {
                 ClassResult r = new ClassResult();
                 r.setName(getChild(node, "ClassShortName").getFirstChild().getTextContent());
                 Collection personResults = select(getChildren(node), hasNodeName("PersonResult"));
-                r.setList((List<Competitor>) collect(personResults, competitorTransformer(controls)));
+                r.setList((List<FormattedCompetitor>) collect(personResults, competitorTransformer(controls)));
                 return r;
             }
         };
@@ -102,7 +102,7 @@ public class Parser {
                 }
                 r.setStatus(getChild(result, "CompetitorStatus").getAttributes().getNamedItem("value").getTextContent());
                 r.setSplits(getSplits(result, controls));
-                return r;
+                return r.format();
             }
         };
     }

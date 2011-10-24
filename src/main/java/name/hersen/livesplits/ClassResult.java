@@ -13,7 +13,7 @@ public class ClassResult {
                 '}';
     }
 
-    private List<Competitor> list;
+    private List<FormattedCompetitor> list;
 
     public void setName(String name) {
         this.name = name;
@@ -23,11 +23,11 @@ public class ClassResult {
         return name;
     }
 
-    public List<Competitor> getList() {
+    public List<FormattedCompetitor> getList() {
         return list;
     }
 
-    public void setList(List<Competitor> list) {
+    public void setList(List<FormattedCompetitor> list) {
         this.list = list;
     }
 }

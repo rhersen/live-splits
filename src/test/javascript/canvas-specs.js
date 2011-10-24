@@ -36,4 +36,19 @@ describe('canvas', function() {
         expect(calls).toBe(0);
     });
 
+    it("draw station", function() {
+        var xActual = 0;
+        var yActual = 0;
+        var contextMock = {
+            fillRect: nop,
+            fillText: function (text, x, y) {
+                xActual = x;
+                yActual = y;
+            },
+            measureText: width(200)
+        };
+        draw(contextMock, {"timeString":"45.40"});
+        expect(xActual > 0).toBeTruthy();
+    });
+
 });
