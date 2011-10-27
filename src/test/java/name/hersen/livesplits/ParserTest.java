@@ -62,7 +62,7 @@ public class ParserTest {
         FormattedCompetitor competitor = l.getList().get(1);
         assertEquals("Amanda Berggren", competitor.getName());
         assertEquals("26.02", competitor.getTime());
-        assertEquals("11.52", competitor.getSplits().get(3).getTime());
+        assertEquals("11.52", competitor.getSplits().get(4).getTime());
     }
     @Test
     public void splitsShouldHaveControls() throws Exception {
@@ -75,11 +75,22 @@ public class ParserTest {
         assertEquals("Tilda Andersson", competitor.getName());
         assertEquals("23493", competitor.getId());
         assertEquals("20.05", competitor.getTime());
-        assertEquals("10.35", competitor.getSplits().get(3).getTime());
-        FormattedSplit split = competitor.getSplits().get(3);
+        assertEquals("10.35", competitor.getSplits().get(4).getTime());
+
+        FormattedSplit split = competitor.getSplits().get(4);
         assertEquals("10.35", split.getTime());
         Control control = split.getControl();
         assertEquals("55", control.getCode());
+
+        split = competitor.getSplits().get(0);
+        assertEquals("00.00", split.getTime());
+        control = split.getControl();
+        assertEquals("S1", control.getCode());
+
+        split = competitor.getSplits().get(8);
+        assertEquals("20.05", split.getTime());
+        control = split.getControl();
+        assertEquals("M1", control.getCode());
     }
 
     @Test

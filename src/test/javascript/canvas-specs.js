@@ -10,8 +10,19 @@ describe('canvas', function() {
         };
     }
 
-    var nop = function () {
-    };
+    var nop = function () { };
+
+    function createContextMock() {
+        return {
+            beginPath: nop,
+            moveTo: nop,
+            lineTo: nop,
+            stroke: nop,
+            fill: nop,
+            fillText: nop,
+            arc: nop
+        }
+    }
 
     function width(value) {
         return function () {
@@ -79,26 +90,24 @@ describe('canvas', function() {
         var xMax = 0;
         var yMin = 10000;
         var yMax = 0;
-        var contextMock = {
-            fillRect: nop,
-            fillText: function (text, x, y) {
-                time = text;
-                ++nCalls;
-                if (x < xMin) {
-                    xMin = x;
-                }
-                if (y < yMin) {
-                    yMin = y;
-                }
-                if (x > xMax) {
-                    xMax = x;
-                }
-                if (y > yMax) {
-                    yMax = y;
-                }
-            },
-            measureText: width(200)
+        var contextMock = createContextMock();
+        contextMock.fillText = function (text, x, y) {
+            time = text;
+            ++nCalls;
+            if (x < xMin) {
+                xMin = x;
+            }
+            if (y < yMin) {
+                yMin = y;
+            }
+            if (x > xMax) {
+                xMax = x;
+            }
+            if (y > yMax) {
+                yMax = y;
+            }
         };
+
         draw(createCanvasMock(contextMock), {"name":"Tilda Andersson","id":"23493","time":"20.05","splits":[
             {"time":"02.40","control":{"x":3386.1,"y":2601.15,"code":"52"}},
             {"time":"10.35","control":{"x":2682.6,"y":2065.8,"code":"55"}}
@@ -113,6 +122,36 @@ describe('canvas', function() {
         expect(yMax).toBeLessThan(640);
         expect(nCalls).toBe(2);
         expect(time.charAt(2)).toBe('.');
+    });
+
+    it("should draw circles", function() {
+        var nCircles = 0;
+        var contextMock = createContextMock();
+        contextMock.arc = function (x, y, radius, startAngle, endAngle) {
+            if (endAngle === 2 * Math.PI) {
+                ++nCircles;
+            }
+        };
+        draw(createCanvasMock(contextMock), {"name":"Tilda Andersson","id":"23493","time":"20.05","splits":[
+            {"time":"00.00","control":{"x":3458.1,"y":2568.9,"code":"S1"}},
+            {"time":"12.02","control":{"x":2682.6,"y":2068.8,"code":"56"}},
+            {"time":"20.05","control":{"x":3129.6,"y":2671.05,"code":"M1"}}
+        ]});
+        expect(nCircles).toBe(3);
+    });
+
+    it("should draw lines", function() {
+        var nLines = 0;
+        var contextMock = createContextMock();
+        contextMock.lineTo = function (x, y) {
+            ++nLines;
+        };
+        draw(createCanvasMock(contextMock), {"name":"Tilda Andersson","id":"23493","time":"20.05","splits":[
+            {"time":"00.00","control":{"x":3458.1,"y":2568.9,"code":"S1"}},
+            {"time":"12.02","control":{"x":2682.6,"y":2068.8,"code":"56"}},
+            {"time":"20.05","control":{"x":3129.6,"y":2671.05,"code":"M1"}}
+        ]});
+        expect(nLines).toBe(2);
     });
 
 });

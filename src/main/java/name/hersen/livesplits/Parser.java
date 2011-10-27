@@ -1,6 +1,5 @@
 package name.hersen.livesplits;
 
-import org.apache.commons.collections.ListUtils;
 import org.apache.commons.collections.Predicate;
 import org.apache.commons.collections.Transformer;
 import org.apache.xerces.parsers.DOMParser;
@@ -20,7 +19,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import static java.util.Collections.singletonList;
 import static org.apache.commons.collections.CollectionUtils.*;
+import static org.apache.commons.collections.ListUtils.union;
 
 @SuppressWarnings({"unchecked"})
 @Service
@@ -54,7 +55,7 @@ public class Parser {
         List controlCodes = findControls(children, "Control", "ControlCode");
         List startPointCodes = findControls(children, "StartPoint", "StartPointCode");
         List finishPointCodes = findControls(children, "FinishPoint", "FinishPointCode");
-        return ListUtils.union(ListUtils.union(startPointCodes, controlCodes), finishPointCodes);
+        return union(union(startPointCodes, controlCodes), finishPointCodes);
     }
 
     private List<Control> findControls(Collection<Node> children, String parent, String child) {
@@ -97,11 +98,15 @@ public class Parser {
                 r.setName(createName(getChild(node, "PersonName")));
                 r.setId(getChild(node, "PersonId").getTextContent());
                 String time = createTime(getChild(result, "Time"));
+                Period total = new Period(0);
                 if (time != null) {
-                    r.setTime(createPeriod(time));
+                    total = createPeriod(time);
+                    r.setTime(total);
                 }
                 r.setStatus(getChild(result, "CompetitorStatus").getAttributes().getNamedItem("value").getTextContent());
-                r.setSplits(getSplits(result, controls));
+                r.setSplits(union(union(singletonList(new Split(new Period(0), controls.get(0))),
+                        getSplits(result, controls)),
+                        singletonList(new Split(total, controls.get(controls.size() - 1)))));
                 return r.format();
             }
         };

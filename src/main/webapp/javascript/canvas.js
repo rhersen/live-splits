@@ -24,8 +24,35 @@ function getContext() {
     return getCanvas().getContext('2d');
 }
 
+function controlRing(context, x, y) {
+    context.beginPath();
+    context.arc(x, y, 32, 0, 2 * Math.PI, false);
+    context.fillStyle = "white";
+    context.fill();
+    context.stroke();
+}
+function controlTime(context, text, x, y) {
+    context.fillStyle = "black";
+    context.fillText(text, x, y);
+}
+function controlLines(splits, xmapper, ymapper, c) {
+    var i = 1;
+    var x = xmapper(splits[0].control.x);
+    var y = ymapper(splits[0].control.y);
+    c.beginPath();
+    c.moveTo(x, y);
+    for (i = 1; i < splits.length; ++i) {
+        x = xmapper(splits[i].control.x);
+        y = ymapper(splits[i].control.y);
+        c.lineTo(x, y);
+    }
+    c.lineWidth = 2;
+    c.strokeStyle = "red";
+    c.stroke();
+    return {x:x, y:y, i:i};
+}
 function draw(canvas, competitor) {
-    var context = canvas.getContext('2d');
+    var c = canvas.getContext('2d');
     var splits = competitor.splits;
     var xs = [];
     var ys = [];
@@ -34,10 +61,17 @@ function draw(canvas, competitor) {
         xs.push(splits[i].control.x);
         ys.push(splits[i].control.y);
     }
-    var xmapper = getCoordinateMapper(xs, 0, canvas.width - 40);
-    var ymapper = getCoordinateMapper(ys, canvas.height - 20, 20);
+    var xmapper = getCoordinateMapper(xs, 33, canvas.width - 33);
+    var ymapper = getCoordinateMapper(ys, canvas.height - 33, 33);
+    var __ret = controlLines(splits, xmapper, ymapper, c);
+    var x = __ret.x;
+    var y = __ret.y;
+    i = __ret.i;
     for (i = 0; i < splits.length; ++i) {
-        context.fillText(splits[i].time, xmapper(splits[i].control.x), ymapper(splits[i].control.y));
+        x = xmapper(splits[i].control.x);
+        y = ymapper(splits[i].control.y);
+        controlRing(c, x, y);
+        controlTime(c, splits[i].time, x, y);
     }
 }
 
