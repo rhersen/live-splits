@@ -1,3 +1,5 @@
+var size = 24;
+
 function each(a, f) {
     for (var i = 0; i < a.length; ++i) {
         f(a[i]);
@@ -18,34 +20,70 @@ function getCanvas() {
 }
 
 function getCoordinateMapper(domain, valueForMin, valueForMax) {
+    var min, max, scale;
+
     if (!domain.length) {
-        return function (x) {
-            return x;
-        };
+        return identity;
     }
-    var max = Math.max.apply(Math, domain);
-    var min = Math.min.apply(Math, domain);
+
+    min = Math.min.apply(Math, domain);
+    max = Math.max.apply(Math, domain);
+
     if (min === max) {
-        return function (x) {
-            return x - min + (valueForMin + valueForMax) / 2;
-        };
+        scale = 1;
+    } else {
+        scale = (valueForMax - valueForMin) / (max - min);
     }
-    var scale = (valueForMax - valueForMin) / (max - min);
-    return function (x) {
-       return valueForMin + scale * (x - min);
-    };
+
+    return coordinateMapper;
+
+    function identity(x) {
+        return x;
+    }
+
+    function coordinateMapper(x) {
+        return valueForMin + scale * (x - min);
+    }
 }
 
 function draw(canvas, competitor) {
     var c = canvas.getContext('2d');
-    var xmapper = getCoordinateMapper(mapControlX(competitor.splits), 33, canvas.width - 33);
-    var ymapper = getCoordinateMapper(mapControlY(competitor.splits), canvas.height - 33, 33);
+    var xmapper = getCoordinateMapper(mapControlX(competitor.splits), size + 1, canvas.width - (size + 1));
+    var ymapper = getCoordinateMapper(mapControlY(competitor.splits), canvas.height - (size + 1), size + 1);
 
     controlLines(c, competitor.splits, xmapper, ymapper);
 
     each(competitor.splits, function (split) {
             var center = mapControl(split.control, xmapper, ymapper);
-            controlRing(c, center.x, center.y);
+            if (split.control.code.charAt(0) === 'S') {
+                drawTriangle(c, center);
+            } else {
+                drawControlRing(c, center.x, center.y, size);
+            }
+            if (split.control.code.charAt(0) === 'M') {
+                drawControlRing(c, center.x, center.y, size - 6);
+            }
+
+            function drawTriangle(c, center) {
+                c.beginPath();
+                c.moveTo(center.x, center.y - size);
+                c.lineTo(center.x + size * 0.866, center.y + size / 2);
+                c.lineTo(center.x - size * 0.866, center.y + size / 2);
+                c.closePath();
+                drawPath(c);
+            }
+
+            function drawControlRing(c, x, y, radius) {
+                c.beginPath();
+                c.arc(x, y, radius, 0, 2 * Math.PI);
+                drawPath(c);
+            }
+
+            function drawPath(c) {
+                c.fillStyle = "white";
+                c.fill();
+                c.stroke();
+            }
         }
     );
 
@@ -70,7 +108,7 @@ function draw(canvas, competitor) {
     }
 
     function setFont(c) {
-        c.font = '24px sans-serif';
+        c.font = size * 3 / 4 + 'px sans-serif';
         c.textAlign = 'center';
         c.textBaseline = 'middle';
         c.fillStyle = 'black';
@@ -94,14 +132,6 @@ function draw(canvas, competitor) {
 
     function mapControl(control, xmapper, ymapper) {
         return {x:xmapper(control.x), y:ymapper(control.y)};
-    }
-
-    function controlRing(c, x, y) {
-        c.beginPath();
-        c.arc(x, y, 32, 0, 2 * Math.PI, false);
-        c.fillStyle = "white";
-        c.fill();
-        c.stroke();
     }
 
     function controlTime(c, time, x, y) {

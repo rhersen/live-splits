@@ -15,6 +15,7 @@ describe('canvas', function() {
     function createContextMock() {
         return {
             beginPath: nop,
+            closePath: nop,
             moveTo: nop,
             lineTo: nop,
             stroke: nop,
@@ -74,8 +75,8 @@ describe('canvas', function() {
 
     it("should handle only one domain value", function() {
         var target = getCoordinateMapper([1000], 0, 100);
-        expect(target(1000)).toBe(50);
-        expect(target(999)).toBeLessThan(50);
+        expect(target(1000)).toBe(0);
+        expect(target(1001)).toBe(1);
     });
 
     it("should handle empty domain", function() {
@@ -151,7 +152,7 @@ describe('canvas', function() {
             {"time":"12.02","control":{"x":2682.6,"y":2068.8,"code":"56"}},
             {"time":"20.05","control":{"x":3129.6,"y":2671.05,"code":"M1"}}
         ]});
-        expect(nLines).toBe(2);
+        expect(nLines).toBe(4);
     });
 
 });
