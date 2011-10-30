@@ -5,6 +5,13 @@ import java.util.List;
 public class ClassResult {
     private String name;
 
+    private List<FormattedCompetitor> list;
+
+    public ClassResult(String name, List<FormattedCompetitor> list) {
+        this.name = name;
+        this.list = list;
+    }
+
     @Override
     public String toString() {
         return "ClassResult{" +
@@ -13,21 +20,11 @@ public class ClassResult {
                 '}';
     }
 
-    private List<FormattedCompetitor> list;
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
     }
 
     public List<FormattedCompetitor> getList() {
         return list;
-    }
-
-    public void setList(List<FormattedCompetitor> list) {
-        this.list = list;
     }
 }

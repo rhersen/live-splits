@@ -51,47 +51,18 @@ function draw(canvas, competitor) {
     var xmapper = getCoordinateMapper(mapControlX(competitor.splits), size + 1, canvas.width - (size + 1));
     var ymapper = getCoordinateMapper(mapControlY(competitor.splits), canvas.height - (size + 1), size + 1);
 
-    controlLines(c, competitor.splits, xmapper, ymapper);
+    drawControlLines(competitor.splits);
 
     each(competitor.splits, function (split) {
-            var center = mapControl(split.control, xmapper, ymapper);
-            if (split.control.code.charAt(0) === 'S') {
-                drawTriangle(c, center);
-            } else {
-                drawControlRing(c, center.x, center.y, size);
-            }
-            if (split.control.code.charAt(0) === 'M') {
-                drawControlRing(c, center.x, center.y, size - 6);
-            }
-
-            function drawTriangle(c, center) {
-                c.beginPath();
-                c.moveTo(center.x, center.y - size);
-                c.lineTo(center.x + size * 0.866, center.y + size / 2);
-                c.lineTo(center.x - size * 0.866, center.y + size / 2);
-                c.closePath();
-                drawPath(c);
-            }
-
-            function drawControlRing(c, x, y, radius) {
-                c.beginPath();
-                c.arc(x, y, radius, 0, 2 * Math.PI);
-                drawPath(c);
-            }
-
-            function drawPath(c) {
-                c.fillStyle = "white";
-                c.fill();
-                c.stroke();
-            }
+            drawControlSymbol(split.control);
         }
     );
 
-    setFont(c);
+    setFont();
 
     each(competitor.splits, function (split) {
-            var center = mapControl(split.control, xmapper, ymapper);
-            controlTime(c, split.time, center.x, center.y);
+            var center = mapControl(split.control);
+            controlTime(split.time, center.x, center.y);
         }
     );
 
@@ -107,40 +78,71 @@ function draw(canvas, competitor) {
         });
     }
 
-    function setFont(c) {
+    function drawControlSymbol(control) {
+        var center = mapControl(control);
+
+        if (control.code.charAt(0) === 'S') {
+            drawTriangle(center);
+        } else {
+            drawControlRing(center.x, center.y, size);
+        }
+
+        if (control.code.charAt(0) === 'M') {
+            drawControlRing(center.x, center.y, size - 6);
+        }
+
+        function drawTriangle(center) {
+            c.beginPath();
+            c.moveTo(center.x, center.y - size);
+            c.lineTo(center.x + size * 0.866, center.y + size / 2);
+            c.lineTo(center.x - size * 0.866, center.y + size / 2);
+            c.closePath();
+            drawPath();
+        }
+
+        function drawControlRing(x, y, radius) {
+            c.beginPath();
+            c.arc(x, y, radius, 0, 2 * Math.PI);
+            drawPath();
+        }
+
+        function drawPath() {
+            c.fillStyle = "white";
+            c.fill();
+            c.stroke();
+        }
+    }
+
+    function setFont() {
         c.font = size * 3 / 4 + 'px sans-serif';
         c.textAlign = 'center';
         c.textBaseline = 'middle';
         c.fillStyle = 'black';
     }
 
-    function controlLines(c, splits, xmapper, ymapper) {
-        var i = 1;
-        var x = xmapper(splits[0].control.x);
-        var y = ymapper(splits[0].control.y);
+    function drawControlLines(splits) {
         c.beginPath();
-        c.moveTo(x, y);
-        for (i = 1; i < splits.length; ++i) {
-            x = xmapper(splits[i].control.x);
-            y = ymapper(splits[i].control.y);
-            c.lineTo(x, y);
+        c.moveTo(xmapper(splits[0].control.x), ymapper(splits[0].control.y));
+
+        for (var i = 1; i < splits.length; ++i) {
+            c.lineTo(xmapper(splits[i].control.x), ymapper(splits[i].control.y));
         }
+        
         c.lineWidth = 2;
         c.strokeStyle = "red";
         c.stroke();
     }
 
-    function mapControl(control, xmapper, ymapper) {
+    function mapControl(control) {
         return {x:xmapper(control.x), y:ymapper(control.y)};
     }
 
-    function controlTime(c, time, x, y) {
+    function controlTime(time, x, y) {
         c.fillText(time, x, y);
     }
 }
 
 function init(id) {
-    var canvas = getCanvas();
     var competitor;
     run();
     window.onresize = handleResize;
@@ -150,9 +152,9 @@ function init(id) {
         $.ajax({url: "splits?id=" + id, cache: false, success: handleSuccess, error: handleError});
     }
 
-    function handleSuccess(x) {
-        competitor = x;
-        draw(getCanvas(), x);
+    function handleSuccess(c) {
+        competitor = c;
+        draw(getCanvas(), c);
     }
 
     function handleError(x) {
@@ -161,6 +163,7 @@ function init(id) {
 
     function handleResize() {
         var margin = 5;
+        var canvas = getCanvas();
         canvas.style.marginLeft = margin + "px";
         canvas.style.marginTop = margin + "px";
 

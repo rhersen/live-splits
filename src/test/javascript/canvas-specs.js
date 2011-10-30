@@ -10,7 +10,7 @@ describe('canvas', function() {
         };
     }
 
-    var nop = function () { };
+    var nop = function () {};
 
     function createContextMock() {
         return {
@@ -23,17 +23,6 @@ describe('canvas', function() {
             fillText: nop,
             arc: nop
         }
-    }
-
-    function width(value) {
-        return function () {
-            return {width: value};
-        }
-    }
-
-    function getFontSize(font) {
-        var matches = font.match(/([\.\d]+)px/);
-        return matches[1];
     }
 
     it("should return identity function", function() {
@@ -49,7 +38,7 @@ describe('canvas', function() {
 
     it("should use maximum domain value", function() {
         var target = getCoordinateMapper([0, 10, 1000], 0, 100);
-        expect(target(100)).toBe(10);
+        expect(target(1000)).toBe(100);
     });
 
     it("should translate", function() {
@@ -59,7 +48,7 @@ describe('canvas', function() {
 
     it("should scale and translate", function() {
         var target = getCoordinateMapper([1000, 900], 0, 200);
-        expect(target(900)).toBe(0);
+        expect(target(950)).toBe(100);
     });
 
     it("should map min to valueForMin", function() {
@@ -73,18 +62,18 @@ describe('canvas', function() {
         expect(target(1000)).toBe(100);
     });
 
-    it("should handle only one domain value", function() {
+    it("should return function with slope 1 if there is only one domain value", function() {
         var target = getCoordinateMapper([1000], 0, 100);
         expect(target(1000)).toBe(0);
         expect(target(1001)).toBe(1);
     });
 
-    it("should handle empty domain", function() {
+    it("should return identity function for empty domain", function() {
         var target = getCoordinateMapper([], 0, 100);
         expect(target(1000)).toBe(1000);
     });
 
-    it("draw wide", function() {
+    it("should draw", function() {
         var time;
         var nCalls = 0;
         var xMin = 10000;
@@ -144,7 +133,7 @@ describe('canvas', function() {
     it("should draw lines", function() {
         var nLines = 0;
         var contextMock = createContextMock();
-        contextMock.lineTo = function (x, y) {
+        contextMock.lineTo = function () {
             ++nLines;
         };
         draw(createCanvasMock(contextMock), {"name":"Tilda Andersson","id":"23493","time":"20.05","splits":[
