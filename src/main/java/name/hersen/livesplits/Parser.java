@@ -73,7 +73,7 @@ public class Parser {
             public Object transform(Object o) {
                 Node n = (Node) o;
                 String code = getText(getChild(n, name)).trim();
-                NamedNodeMap attributes = getChild(n, "ControlPosition").getAttributes();
+                NamedNodeMap attributes = getChild(n, "MapPosition").getAttributes();
                 String x = attributes.getNamedItem("x").getTextContent();
                 String y = attributes.getNamedItem("y").getTextContent();
                 return new Control(code, Double.parseDouble(x), Double.parseDouble(y));
