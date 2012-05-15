@@ -111,7 +111,6 @@ describe('canvas', function() {
         expect(yMax).toBeGreaterThan(320);
         expect(yMax).toBeLessThan(640);
         expect(nCalls).toBe(3);
-        expect(time.charAt(2)).toBe('.');
     });
 
     it("should draw circles", function() {
