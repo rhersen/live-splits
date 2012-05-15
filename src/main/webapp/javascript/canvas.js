@@ -66,6 +66,8 @@ function draw(canvas, competitor) {
         }
     );
 
+    drawLapTimes(competitor.splits);
+
     function mapControlX(splits) {
         return map(splits, function (split) {
             return split.control.x;
@@ -127,10 +129,18 @@ function draw(canvas, competitor) {
         for (var i = 1; i < splits.length; ++i) {
             c.lineTo(xmapper(splits[i].control.x), ymapper(splits[i].control.y));
         }
-        
+
         c.lineWidth = 2;
         c.strokeStyle = "red";
         c.stroke();
+    }
+
+    function drawLapTimes(splits) {
+        for (var i = 1; i < splits.length; ++i) {
+            var c0 = splits[i].control;
+            var c1 = splits[i - 1].control;
+            c.fillText(splits[i].lap, xmapper((c0.x + c1.x) / 2), ymapper((c0.y + c1.y) / 2));
+        }
     }
 
     function mapControl(control) {

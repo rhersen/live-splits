@@ -3,12 +3,14 @@ package name.hersen.livesplits;
 import org.joda.time.Period;
 
 public class Split {
-    private Period time;
+    private final Period time;
     private Control control;
+    private Period lap;
 
-    public Split(Period time, Control control) {
+    public Split(Period time, Control control, Period lap) {
         this.time = time;
         this.control = control;
+        this.lap = lap;
     }
 
     public Period getTime() {
@@ -20,6 +22,6 @@ public class Split {
     }
 
     public FormattedSplit format() {
-        return new FormattedSplit(getTime(), getControl());
+        return new FormattedSplit(time, getControl(), lap);
     }
 }

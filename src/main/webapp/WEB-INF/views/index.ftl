@@ -9,14 +9,17 @@
 </head>
 <body>
 
-<h2>Natt-KM för ungdomar 18 okt</h2>
+<h2>Ungdomsserien Söder 15 maj</h2>
 
 <ol>
     <li>
         <a href="r">Resultat</a>
     </li>
     <li>
-        <a href="s">Sträcktider</a>
+        <a href="l">Sträcktider</a>
+    </li>
+    <li>
+        <a href="s">Mellantider</a>
     </li>
 </ol>
 

@@ -1,8 +1,6 @@
 package name.hersen.livesplits;
 
 import org.joda.time.Period;
-import org.joda.time.format.PeriodFormatter;
-import org.joda.time.format.PeriodFormatterBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,19 +30,6 @@ public class Competitor {
 
     public Period getTime() {
         return time;
-    }
-
-    public Competitor() {
-        PeriodFormatter formatter = new PeriodFormatterBuilder()
-                .appendHours()
-                .appendSeparatorIfFieldsBefore(".")
-                .minimumPrintedDigits(2)
-                .printZeroAlways()
-                .appendMinutes()
-                .appendSeparator(".")
-                .printZeroAlways()
-                .appendSeconds()
-                .toFormatter();
     }
 
     public void setTime(Period period) {

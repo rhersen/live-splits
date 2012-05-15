@@ -35,6 +35,12 @@ public class SplitsController implements ServletContextAware {
         return "splits";
     }
 
+    @RequestMapping(value = "/l", method = RequestMethod.GET)
+    public String getLaps(Model model) throws IOException, SAXException {
+        model.addAttribute("classes", parseSplits());
+        return "laps";
+    }
+
     @RequestMapping(value = "/c", method = RequestMethod.GET)
     public String getCompetitor(@RequestParam String id, Model model) throws IOException, SAXException {
         List<ClassResult> classResults = parseSplits();

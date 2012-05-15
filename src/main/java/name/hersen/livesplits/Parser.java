@@ -27,7 +27,7 @@ import static org.apache.commons.collections.ListUtils.union;
 @Service
 public class Parser {
 
-    private PeriodFormatter periodParser;
+    private final PeriodFormatter periodParser;
 
     public Parser() {
         periodParser = new PeriodFormatterBuilder().appendHours().appendLiteral(":").appendMinutes().appendLiteral(":").appendSeconds().toFormatter();
@@ -122,30 +122,23 @@ public class Parser {
     }
 
     private List getAllSplits(Node result, List<Control> controls, Period total) {
-        Split start = new Split(new Period(0), controls.get(0));
-        Split finish = new Split(total, controls.get(controls.size() - 1));
-        return union(union(singletonList(start), getSplits(result, controls)), singletonList(finish));
-    }
-
-    private List getSplits(Node result, List<Control> controls) {
+        Split start = new Split(new Period(0), controls.get(0), new Period(0));
         Collection splitTimes = select(getChildren(result), hasNodeName("SplitTime"));
-        return (List) collect(splitTimes, splitTransformer(controls));
-    }
-
-    private Transformer splitTransformer(final List<Control> controls) {
-        return new Transformer() {
-            public Object transform(Object o) {
-                Node splitTime = (Node) o;
-                Node time = getChild(splitTime, "Time");
-                if (time == null) {
-                    return null;
-                }
-                Node controlCode = getChild(splitTime, "ControlCode");
-                String code = controlCode.getTextContent();
-                Control control = (Control) find(controls, hasControlCode(code));
-                return new Split(Period.parse(time.getTextContent(), periodParser), control);
+        List r = new ArrayList();
+        Period previous = new Period();
+        for (Object splitTime : splitTimes) {
+            Node time = getChild((Node) splitTime, "Time");
+            Node controlCode = getChild((Node) splitTime, "ControlCode");
+            String code = controlCode.getTextContent();
+            Control control = (Control) find(controls, hasControlCode(code));
+            if (time != null) {
+                Period period = Period.parse(time.getTextContent(), periodParser);
+                r.add(new Split(period, control, period.minus(previous).normalizedStandard()));
+                previous = period;
             }
-        };
+        }
+        Split finish = new Split(total, controls.get(controls.size() - 1), total.minus(previous).normalizedStandard());
+        return union(union(singletonList(start), r), singletonList(finish));
     }
 
     private Predicate hasControlCode(final String controlCode) {
@@ -162,11 +155,7 @@ public class Parser {
     }
 
     private String createTime(Node n) {
-        if (n == null) {
-            return null;
-        }
-
-        return getText(n);
+        return n == null ? null : getText(n);
     }
 
     private Node getChild(Node parent, String name) {

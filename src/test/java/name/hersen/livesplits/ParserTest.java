@@ -79,11 +79,20 @@ public class ParserTest {
 
         FormattedSplit split = competitor.getSplits().get(4);
         assertEquals("10.35", split.getTime());
+        assertEquals("3.04", split.getLap());
         Control control = split.getControl();
         assertEquals("55", control.getCode());
 
+        split = competitor.getSplits().get(5);
+        assertEquals("12.02", split.getTime());
+        assertEquals("1.27", split.getLap());
+
+        split = competitor.getSplits().get(8);
+        assertEquals("20.05", split.getTime());
+        assertEquals("29", split.getLap());
+
         split = competitor.getSplits().get(0);
-        assertEquals("00.00", split.getTime());
+        assertEquals("00", split.getTime());
         control = split.getControl();
         assertEquals("S1", control.getCode());
 
