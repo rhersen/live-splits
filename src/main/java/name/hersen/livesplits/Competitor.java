@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Competitor {
-    private String name;
-    private Period time;
-    private String status;
-    private List splits;
-    private String id;
+    private final String name;
+    private final Period time;
+    private final String status;
+    private final List<Split> splits;
+    private final String id;
 
     public String getName() {
         return name;
@@ -24,40 +24,26 @@ public class Competitor {
                 '}';
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Period getTime() {
         return time;
     }
 
-    public void setTime(Period period) {
-        this.time = period;
-    }
-
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public List getSplits() {
+    public List<Split> getSplits() {
         return splits;
     }
 
-    public void setSplits(List splits) {
+    public Competitor(String name, Period time, String status, List<Split> splits, String id) {
+        this.name = name;
+        this.time = time;
+        this.status = status;
         this.splits = splits;
+        this.id = id;
     }
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    @SuppressWarnings({"unchecked"})
     public FormattedCompetitor format() {
         List<FormattedSplit> formattedSplits = new ArrayList<FormattedSplit>();
         List<Split> splitList = getSplits();

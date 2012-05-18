@@ -14,7 +14,7 @@ import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.List;
+import java.util.Collection;
 
 @Controller
 public class SplitsController implements ServletContextAware {
@@ -43,7 +43,7 @@ public class SplitsController implements ServletContextAware {
 
     @RequestMapping(value = "/c", method = RequestMethod.GET)
     public String getCompetitor(@RequestParam String id, Model model) throws IOException, SAXException {
-        List<ClassResult> classResults = parseSplits();
+        Collection<ClassResult> classResults = parseSplits();
         model.addAttribute("id", id);
         model.addAttribute("competitor", findCompetitor(id, classResults));
         model.addAttribute("classes", classResults);
@@ -56,10 +56,9 @@ public class SplitsController implements ServletContextAware {
         return findCompetitor(id, parseSplits());
     }
 
-    private FormattedCompetitor findCompetitor(String id, List<ClassResult> classResults) {
+    private FormattedCompetitor findCompetitor(String id, Iterable<ClassResult> classResults) {
         for (ClassResult classResult : classResults) {
-            List<FormattedCompetitor> competitors = classResult.getList();
-            for (FormattedCompetitor competitor : competitors) {
+            for (FormattedCompetitor competitor : classResult.getList()) {
                 if (competitor.getId().equals(id)) {
                     return competitor;
                 }
@@ -69,9 +68,8 @@ public class SplitsController implements ServletContextAware {
         throw new IllegalStateException(id + " not found");
     }
 
-    private List<ClassResult> parseSplits() throws IOException, SAXException {
-        List controls = parser.parseCourseData(getXml("courses"));
-        return parser.parseResultList(getXml("splits"), controls);
+    private Collection<ClassResult> parseSplits() throws IOException, SAXException {
+        return parser.parseResultList(getXml("splits"), parser.parseCourseData(getXml("courses")));
     }
 
     private InputStreamReader getXml(String name) throws IOException {

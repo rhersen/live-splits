@@ -1,7 +1,5 @@
 package name.hersen.livesplits;
 
-import org.apache.commons.collections.Predicate;
-import org.apache.commons.collections.Transformer;
 import org.apache.xerces.parsers.DOMParser;
 import org.joda.time.Period;
 import org.joda.time.format.PeriodFormatter;
@@ -15,15 +13,8 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
-import static java.util.Collections.singletonList;
-import static org.apache.commons.collections.CollectionUtils.*;
-import static org.apache.commons.collections.ListUtils.union;
-
-@SuppressWarnings({"unchecked"})
 @Service
 public class Parser {
 
@@ -33,11 +24,11 @@ public class Parser {
         periodParser = new PeriodFormatterBuilder().appendHours().appendLiteral(":").appendMinutes().appendLiteral(":").appendSeconds().toFormatter();
     }
 
-    public List<ClassResult> parseResultList(InputStreamReader xml, List controls) throws IOException, SAXException {
+    public Collection<ClassResult> parseResultList(InputStreamReader xml, Deque<Control> controls) throws IOException, SAXException {
         return getClassResults(parseXmlReader(xml), controls);
     }
 
-    public List parseCourseData(InputStreamReader xml) throws IOException, SAXException {
+    public Deque<Control> parseCourseData(InputStreamReader xml) throws IOException, SAXException {
         return getControls(parseXmlReader(xml));
     }
 
@@ -48,106 +39,97 @@ public class Parser {
         return p;
     }
 
-    private List<ClassResult> getClassResults(DOMParser p, List<Control> controls) {
-        NodeList classResults = p.getDocument().getElementsByTagName("ClassResult");
-        return (List<ClassResult>) collect(getChildren(classResults), classResultTransformer(controls));
+    private Collection<ClassResult> getClassResults(DOMParser p, Deque<Control> controls) {
+        Collection<ClassResult> r = new ArrayDeque<ClassResult>();
+        for (Node child : getChildren(p.getDocument().getElementsByTagName("ClassResult"))) {
+            r.add(createClassResult(child, controls));
+        }
+        return r;
     }
 
-    private List<Control> getControls(DOMParser p) {
-        NodeList courseDatas = p.getDocument().getElementsByTagName("CourseData");
-        Node courseData = getChildren(courseDatas).iterator().next();
-        Collection<Node> children = getChildren(courseData);
-        List startPointCodes = findControls(children, "StartPoint", "StartPointCode");
-        List controlCodes = findControls(children, "Control", "ControlCode");
-        List finishPointCodes = findControls(children, "FinishPoint", "FinishPointCode");
-        return union(union(startPointCodes, controlCodes), finishPointCodes);
+    private Deque<Control> getControls(DOMParser p) {
+        Collection<Node> children = getChildren(getChildren(p.getDocument().getElementsByTagName("CourseData")).iterator().next());
+        Deque<Control> r = new ArrayDeque<Control>();
+        r.addAll(findControls(children, "StartPoint", "StartPointCode"));
+        r.addAll(findControls(children, "Control", "ControlCode"));
+        r.addAll(findControls(children, "FinishPoint", "FinishPointCode"));
+        return r;
     }
 
-    private List<Control> findControls(Collection<Node> children, String parent, String child) {
-        Collection controls = select(children, hasNodeName(parent));
-        return (List) collect(controls, controlTransformer(child));
-    }
-
-    private Transformer controlTransformer(final String name) {
-        return new Transformer() {
-            public Object transform(Object o) {
-                Node n = (Node) o;
-                String code = getText(getChild(n, name)).trim();
-                NamedNodeMap attributes = getChild(n, "MapPosition").getAttributes();
-                String x = attributes.getNamedItem("x").getTextContent();
-                String y = attributes.getNamedItem("y").getTextContent();
-                return new Control(code, Double.parseDouble(x), Double.parseDouble(y));
+    private Collection<Control> findControls(Iterable<Node> children, String parent, String child) {
+        Collection<Control> r = new ArrayDeque<Control>();
+        for (Node control : children) {
+            if (hasNodeName(parent, control)) {
+                r.add(createControl(control, child));
             }
-        };
+        }
+        return r;
     }
 
-    private Transformer classResultTransformer(final List<Control> controls) {
-        return new Transformer() {
-            public Object transform(Object o) {
-                Node node = (Node) o;
-                String name = getText(getChild(node, "ClassShortName"));
-                Collection personResults = select(getChildren(node), hasNodeName("PersonResult"));
-                return new ClassResult(name, (List<FormattedCompetitor>) collect(personResults, competitorTransformer(controls)));
+    private Control createControl(Node n, String name) {
+        NamedNodeMap attributes = getChild(n, "MapPosition").getAttributes();
+        return new Control(getText(getChild(n, name)).trim(), Double.parseDouble(attributes.getNamedItem("x").getTextContent()), Double.parseDouble(attributes.getNamedItem("y").getTextContent()));
+    }
+
+    private ClassResult createClassResult(Node node, Deque<Control> controls) {
+        List<FormattedCompetitor> r = new ArrayList<FormattedCompetitor>();
+        for (Node personResult : getChildren(node)) {
+            if (hasNodeName("PersonResult", personResult)) {
+                r.add(formatCompetitor(personResult, controls));
             }
-        };
+        }
+        return new ClassResult(getText(getChild(node, "ClassShortName")), r);
     }
 
-    private Predicate hasNodeName(final String name) {
-        return new Predicate() {
-            public boolean evaluate(Object o) {
-                return ((Node) o).getNodeName().equalsIgnoreCase(name);
-            }
-        };
+    private boolean hasNodeName(String name, Node node) {
+        return node.getNodeName().equalsIgnoreCase(name);
     }
 
-    private Transformer competitorTransformer(final List<Control> controls) {
-        return new Transformer() {
-            public Object transform(Object o) {
-                Node result = getChild((Node) o, "Result");
-                Node person = getChild((Node) o, "Person");
-                Competitor r = new Competitor();
-                r.setName(createName(getChild(person, "PersonName")));
-                r.setId(getChild(person, "PersonId").getTextContent());
-                String time = createTime(getChild(result, "Time"));
-                Period total = new Period(0);
-                if (time != null) {
-                    total = Period.parse(time, periodParser);
-                    r.setTime(total);
-                }
-                r.setStatus(getChild(result, "CompetitorStatus").getAttributes().getNamedItem("value").getTextContent());
-                r.setSplits(getAllSplits(result, controls, total));
-                return r.format();
-            }
-        };
+    private FormattedCompetitor formatCompetitor(Node node, Deque<Control> controls) {
+        Node person = getChild(node, "Person");
+        String time = createTime(getChild(getChild(node, "Result"), "Time"));
+        Period total = new Period(0);
+        Period time1 = null;
+        if (time != null) {
+            total = Period.parse(time, periodParser);
+            time1 = total;
+        }
+        return new Competitor(createName(getChild(person, "PersonName")), time1, getChild(getChild(node, "Result"), "CompetitorStatus").getAttributes().getNamedItem("value").getTextContent(), getAllSplits(getChild(node, "Result"), controls, total), getChild(person, "PersonId").getTextContent()).format();
     }
 
-    private List getAllSplits(Node result, List<Control> controls, Period total) {
-        Split start = new Split(new Period(0), controls.get(0), new Period(0));
-        Collection splitTimes = select(getChildren(result), hasNodeName("SplitTime"));
-        List r = new ArrayList();
+    private List<Split> getAllSplits(Node result, Deque<Control> controls, Period total) {
+        List<Split> r = new ArrayList<Split>();
+        r.add(new Split(new Period(0), controls.iterator().next(), new Period(0)));
         Period previous = new Period();
-        for (Object splitTime : splitTimes) {
-            Node time = getChild((Node) splitTime, "Time");
-            Node controlCode = getChild((Node) splitTime, "ControlCode");
-            String code = controlCode.getTextContent();
-            Control control = (Control) find(controls, hasControlCode(code));
+        for (Node splitTime : selectByNodeName(result)) {
+            Node time = getChild(splitTime, "Time");
             if (time != null) {
                 Period period = Period.parse(time.getTextContent(), periodParser);
-                r.add(new Split(period, control, period.minus(previous).normalizedStandard()));
+                r.add(new Split(period, findByControlCode(controls, getChild(splitTime, "ControlCode").getTextContent()), period.minus(previous).normalizedStandard()));
                 previous = period;
             }
         }
-        Split finish = new Split(total, controls.get(controls.size() - 1), total.minus(previous).normalizedStandard());
-        return union(union(singletonList(start), r), singletonList(finish));
+        r.add(new Split(total, controls.getLast(), total.minus(previous).normalizedStandard()));
+        return r;
     }
 
-    private Predicate hasControlCode(final String controlCode) {
-        return new Predicate() {
-            public boolean evaluate(Object o) {
-                Control control = (Control) o;
-                return control.getCode().equals(controlCode);
+    private Iterable<Node> selectByNodeName(Node result) {
+        Collection<Node> r = new ArrayList<Node>();
+        for (Node child : getChildren(result)) {
+            if (hasNodeName("SplitTime", child)) {
+                r.add(child);
             }
-        };
+        }
+        return r;
+    }
+
+    private Control findByControlCode(Iterable<Control> controls, String controlCode) {
+        for (Control control : controls) {
+            if (control.getCode().equals(controlCode)) {
+                return control;
+            }
+        }
+        return null;
     }
 
     private String createName(Node n) {
@@ -159,7 +141,12 @@ public class Parser {
     }
 
     private Node getChild(Node parent, String name) {
-        return (Node) find(getChildren(parent), hasNodeName(name));
+        for (Node child : getChildren(parent)) {
+            if (hasNodeName(name, child)) {
+                return child;
+            }
+        }
+        return null;
     }
 
     private Collection<Node> getChildren(Node node) {
@@ -169,8 +156,7 @@ public class Parser {
     private Collection<Node> getChildren(NodeList list) {
         Collection<Node> r = new ArrayList<Node>();
         for (int i = 0; i < list.getLength(); i++) {
-            Node n = list.item(i);
-            r.add(n);
+            r.add(list.item(i));
         }
         return r;
     }

@@ -7,7 +7,7 @@ import org.xml.sax.SAXException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -104,21 +104,23 @@ public class ParserTest {
 
     @Test
     public void courses() throws Exception {
-        List controls = testParseCourseData("courses.xml");
+        Deque<Control> controls1 = testParseCourseData("courses.xml");
+        ArrayList<Control> controls = new ArrayList<Control>(controls1);
         assertEquals(28, controls.size());
-        Control first = (Control) controls.get(1);
+        Control first = controls.get(1);
         assertEquals("31", first.getCode());
         assertTrue(first.getX() > 0);
         assertTrue(first.getY() > 0);
-        assertEquals("S1", ((Control) controls.get(0)).getCode());
-        assertEquals("M1", ((Control) controls.get(27)).getCode());
+        assertEquals("S1", controls.get(0).getCode());
+        assertEquals("M1", controls.get(27).getCode());
     }
 
     private List<ClassResult> testParseResultList(String file) throws IOException, SAXException {
         InputStream stream = getClass().getResourceAsStream("/" + file);
-        return target.parseResultList(new InputStreamReader(stream, "UTF-8"), testParseCourseData("courses.xml"));
+        Collection<ClassResult> r = target.parseResultList(new InputStreamReader(stream, "UTF-8"), testParseCourseData("courses.xml"));
+        return new ArrayList<ClassResult>(r);
     }
-    private List testParseCourseData(String file) throws IOException, SAXException {
+    private Deque<Control> testParseCourseData(String file) throws IOException, SAXException {
         InputStream stream = getClass().getResourceAsStream("/" + file);
         return target.parseCourseData(new InputStreamReader(stream, "UTF-8"));
     }
