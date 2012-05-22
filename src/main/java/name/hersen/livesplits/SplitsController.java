@@ -69,7 +69,7 @@ public class SplitsController implements ServletContextAware {
     }
 
     private Collection<ClassResult> parseSplits() throws IOException, SAXException {
-        return parser.parseResultList(getXml("splits"), parser.parseCourseData(getXml("courses")));
+        return parser.parseResultList(getXml("splits"), getXml("courses"));
     }
 
     private InputStreamReader getXml(String name) throws IOException {

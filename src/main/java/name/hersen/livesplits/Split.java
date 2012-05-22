@@ -4,17 +4,13 @@ import org.joda.time.Period;
 
 public class Split {
     private final Period time;
-    private Control control;
-    private Period lap;
+    private final Control control;
+    private final Period lap;
 
-    public Split(Period time, Control control, Period lap) {
+    public Split(Control control, Period time, Period lap) {
         this.time = time;
         this.control = control;
         this.lap = lap;
-    }
-
-    public Period getTime() {
-        return time;
     }
 
     public Control getControl() {

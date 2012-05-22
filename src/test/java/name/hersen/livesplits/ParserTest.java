@@ -7,10 +7,11 @@ import org.xml.sax.SAXException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class ParserTest {
 
@@ -18,7 +19,14 @@ public class ParserTest {
 
     @Before
     public void setUp() throws Exception {
+        XmlHelper xmlHelper = new XmlHelper();
+
+        CourseParser courseParser = new CourseParser();
+        courseParser.xml = xmlHelper;
+
         target = new Parser();
+        target.xml = xmlHelper;
+        target.courseParser = courseParser;
     }
 
     @Test
@@ -102,27 +110,11 @@ public class ParserTest {
         assertEquals("M1", control.getCode());
     }
 
-    @Test
-    public void courses() throws Exception {
-        Deque<Control> controls1 = testParseCourseData("courses.xml");
-        ArrayList<Control> controls = new ArrayList<Control>(controls1);
-        assertEquals(28, controls.size());
-        Control first = controls.get(1);
-        assertEquals("31", first.getCode());
-        assertTrue(first.getX() > 0);
-        assertTrue(first.getY() > 0);
-        assertEquals("S1", controls.get(0).getCode());
-        assertEquals("M1", controls.get(27).getCode());
-    }
-
     private List<ClassResult> testParseResultList(String file) throws IOException, SAXException {
         InputStream stream = getClass().getResourceAsStream("/" + file);
-        Collection<ClassResult> r = target.parseResultList(new InputStreamReader(stream, "UTF-8"), testParseCourseData("courses.xml"));
+        InputStream stream2 = getClass().getResourceAsStream("/" + "courses.xml");
+        Collection<ClassResult> r = target.parseResultList(new InputStreamReader(stream, "UTF-8"), new InputStreamReader(stream2, "UTF-8"));
         return new ArrayList<ClassResult>(r);
-    }
-    private Deque<Control> testParseCourseData(String file) throws IOException, SAXException {
-        InputStream stream = getClass().getResourceAsStream("/" + file);
-        return target.parseCourseData(new InputStreamReader(stream, "UTF-8"));
     }
 
 }
