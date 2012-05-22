@@ -15,13 +15,13 @@ import java.io.Reader;
 import java.util.*;
 
 @Service
-public class Parser {
+public class ResultParser {
 
     private final PeriodFormatter periodParser;
     @Autowired XmlHelper xml;
     @Autowired CourseParser courseParser;
 
-    public Parser() {
+    public ResultParser() {
         periodParser = new PeriodFormatterBuilder().appendHours().appendLiteral(":").appendMinutes().appendLiteral(":").appendSeconds().toFormatter();
     }
 

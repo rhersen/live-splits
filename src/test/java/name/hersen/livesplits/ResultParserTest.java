@@ -13,9 +13,9 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class ParserTest {
+public class ResultParserTest {
 
-    private Parser target;
+    private ResultParser target;
 
     @Before
     public void setUp() throws Exception {
@@ -24,7 +24,7 @@ public class ParserTest {
         CourseParser courseParser = new CourseParser();
         courseParser.xml = xmlHelper;
 
-        target = new Parser();
+        target = new ResultParser();
         target.xml = xmlHelper;
         target.courseParser = courseParser;
     }
