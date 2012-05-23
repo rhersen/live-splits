@@ -20,9 +20,19 @@ public class ResultParser {
     private final PeriodFormatter periodParser;
     @Autowired XmlHelper xml;
     @Autowired CourseParser courseParser;
+    private PeriodFormatter formatter;
 
     public ResultParser() {
         periodParser = new PeriodFormatterBuilder().appendHours().appendLiteral(":").appendMinutes().appendLiteral(":").appendSeconds().toFormatter();
+        formatter = new PeriodFormatterBuilder()
+                .appendHours()
+                .appendSeparatorIfFieldsBefore(".")
+                .appendMinutes()
+                .appendSeparator(".")
+                .minimumPrintedDigits(2)
+                .printZeroAlways()
+                .appendSeconds()
+                .toFormatter();
     }
 
     public Collection<ClassResult> parseResultList(Reader splits, Reader courses) throws IOException, SAXException {
@@ -51,39 +61,60 @@ public class ResultParser {
 
     private FormattedCompetitor formatCompetitor(Node node, Deque<Control> controls) {
         Node person = xml.getChild(node, "Person");
+        Node result = xml.getChild(node, "Result");
+        Node statusNode = xml.getChild(result, "CompetitorStatus");
 
-        String t = xml.getText(xml.getChild(xml.getChild(node, "Result"), "Time"));
-        Period total = new Period(0);
-        Period time = null;
-        if (t != null) {
-            total = Period.parse(t, periodParser);
-            time = total;
-        }
+        String t = xml.getText(xml.getChild(result, "Time"));
+        Period total = t != null ? Period.parse(t, periodParser) : new Period(0);
+        Period time = t != null ? total : null;
 
-        Node statusNode = xml.getChild(xml.getChild(node, "Result"), "CompetitorStatus");
         String status = statusNode.getAttributes().getNamedItem("value").getTextContent();
-        List<Split> splits = getAllSplits(xml.getChild(node, "Result"), controls, total);
+        List<Split> splits = getAllSplits(result, controls, total);
         String id = xml.getChild(person, "PersonId").getTextContent();
         String fullName = xml.getFullName(xml.getChild(person, "PersonName"));
-        Competitor r = new Competitor(fullName, time, status, splits, id);
+        Deque<String> laps = getLaps(result, total);
+
+        Competitor r = new Competitor(fullName, time, status, splits, id, laps);
         return r.format();
     }
 
     private List<Split> getAllSplits(Node parent, Deque<Control> controls, Period total) {
         List<Split> r = new ArrayList<Split>();
-        Period period = new Period(0);
-        r.add(new Split(controls.getFirst(), period, period));
-        Period previous = period;
+        Period p = new Period(0);
+        r.add(new Split(controls.getFirst(), p));
+        for (Node n : xml.getChildrenWithName(parent, "SplitTime")) {
+            Node t = xml.getChild(n, "Time");
+            if (t != null) {
+                p = Period.parse(t.getTextContent(), periodParser);
+                Control c = findByControlCode(controls, xml.getChild(n, "ControlCode").getTextContent());
+                r.add(new Split(c, p));
+            }
+        }
+        r.add(new Split(controls.getLast(), total));
+        return r;
+    }
+
+    private Deque<String> getLaps(Node result, Period total) {
+        Deque<String> laps = new ArrayDeque<String>();
+        for (Period lap : getLaps0(result, total)) {
+            laps.add(lap.toString(formatter));
+        }
+        return laps;
+    }
+
+    private Iterable<Period> getLaps0(Node parent, Period total) {
+        Collection<Period> r = new ArrayDeque<Period>();
+        Period current = new Period(0);
+        Period previous = current;
         for (Node splitTime : xml.getChildrenWithName(parent, "SplitTime")) {
             Node time = xml.getChild(splitTime, "Time");
             if (time != null) {
-                period = Period.parse(time.getTextContent(), periodParser);
-                Control control = findByControlCode(controls, xml.getChild(splitTime, "ControlCode").getTextContent());
-                r.add(new Split(control, period, minus(period, previous)));
-                previous = period;
+                current = Period.parse(time.getTextContent(), periodParser);
+                r.add(minus(current, previous));
+                previous = current;
             }
         }
-        r.add(new Split(controls.getLast(), total, minus(total, previous)));
+        r.add(minus(total, previous));
         return r;
     }
 

@@ -3,6 +3,7 @@ package name.hersen.livesplits;
 import org.joda.time.Period;
 
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class Competitor {
@@ -11,6 +12,7 @@ public class Competitor {
     private final String status;
     private final List<Split> splits;
     private final String id;
+    private final Deque<String> laps;
 
     public String getName() {
         return name;
@@ -32,12 +34,13 @@ public class Competitor {
         return splits;
     }
 
-    public Competitor(String name, Period time, String status, List<Split> splits, String id) {
+    public Competitor(String name, Period time, String status, List<Split> splits, String id, Deque<String> laps) {
         this.name = name;
         this.time = time;
         this.status = status;
         this.splits = splits;
         this.id = id;
+        this.laps = laps;
     }
 
     public String getId() {
@@ -52,6 +55,6 @@ public class Competitor {
                 formattedSplits.add(split.format());
             }
         }
-        return new FormattedCompetitor(getId(), getName(), getTime(), status, formattedSplits);
+        return new FormattedCompetitor(getId(), getName(), getTime(), status, formattedSplits, laps);
     }
 }

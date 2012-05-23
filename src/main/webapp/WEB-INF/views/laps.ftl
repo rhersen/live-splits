@@ -15,8 +15,8 @@
         <#list c.list as p>
             <tr>
                 <td class="split">${p.name}</td>
-                <#list p.splits as s>
-                    <td class="split">${s.lap}</td>
+                <#list p.laps as s>
+                    <td class="split">${s}</td>
                 </#list>
                 <td class="split">${p.time}</td>
             </tr>

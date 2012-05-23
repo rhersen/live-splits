@@ -66,7 +66,7 @@ function draw(canvas, competitor) {
         }
     );
 
-    drawLapTimes(competitor.splits);
+    drawLapTimes(competitor.splits, competitor.laps);
 
     function mapControlX(splits) {
         return map(splits, function (split) {
@@ -135,11 +135,11 @@ function draw(canvas, competitor) {
         c.stroke();
     }
 
-    function drawLapTimes(splits) {
+    function drawLapTimes(splits, laps) {
         for (var i = 1; i < splits.length; ++i) {
             var c0 = splits[i].control;
             var c1 = splits[i - 1].control;
-            c.fillText(splits[i].lap, xmapper((c0.x + c1.x) / 2), ymapper((c0.y + c1.y) / 2));
+            c.fillText(laps[i - 1], xmapper((c0.x + c1.x) / 2), ymapper((c0.y + c1.y) / 2));
         }
     }
 

@@ -5,11 +5,10 @@ import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 
 public class FormattedSplit {
-    private String time;
-    private Control control;
-    private String lap;
+    private final String time;
+    private final Control control;
 
-    public FormattedSplit(Period time, Control control, Period lap) {
+    public FormattedSplit(Period time, Control control) {
         this.control = control;
         PeriodFormatter formatter = new PeriodFormatterBuilder()
                 .appendHours()
@@ -21,7 +20,6 @@ public class FormattedSplit {
                 .appendSeconds()
                 .toFormatter();
         this.time = time.toString(formatter);
-        this.lap = lap.toString(formatter);
     }
 
     public String getTime() {
@@ -32,7 +30,4 @@ public class FormattedSplit {
         return control;
     }
 
-    public String getLap() {
-        return lap;
-    }
 }

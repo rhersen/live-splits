@@ -87,17 +87,14 @@ public class ResultParserTest {
 
         FormattedSplit split = competitor.getSplits().get(4);
         assertEquals("10.35", split.getTime());
-        assertEquals("3.04", split.getLap());
         Control control = split.getControl();
         assertEquals("55", control.getCode());
 
         split = competitor.getSplits().get(5);
         assertEquals("12.02", split.getTime());
-        assertEquals("1.27", split.getLap());
 
         split = competitor.getSplits().get(8);
         assertEquals("20.05", split.getTime());
-        assertEquals("29", split.getLap());
 
         split = competitor.getSplits().get(0);
         assertEquals("00", split.getTime());
@@ -108,6 +105,18 @@ public class ResultParserTest {
         assertEquals("20.05", split.getTime());
         control = split.getControl();
         assertEquals("M1", control.getCode());
+    }
+    @Test
+    public void splitsShouldHaveLaps() throws Exception {
+        List<ClassResult> classes = testParseResultList("splits.xml");
+        assertEquals(9, classes.size());
+
+        ClassResult d10 = classes.get(4);
+        FormattedCompetitor competitor = d10.getList().get(1);
+        List<String> laps = new ArrayList<String>(competitor.getLaps());
+        assertEquals("3.04", laps.get(3));
+        assertEquals("1.27", laps.get(4));
+        assertEquals("29", laps.get(7));
     }
 
     private List<ClassResult> testParseResultList(String file) throws IOException, SAXException {
