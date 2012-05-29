@@ -20,11 +20,12 @@ public class ResultParser {
     private final PeriodFormatter periodParser;
     @Autowired XmlHelper xml;
     @Autowired CourseParser courseParser;
-    private PeriodFormatter formatter;
+    @Autowired ResultFormatter resultFormatter;
+    private final PeriodFormatter periodFormatter;
 
     public ResultParser() {
         periodParser = new PeriodFormatterBuilder().appendHours().appendLiteral(":").appendMinutes().appendLiteral(":").appendSeconds().toFormatter();
-        formatter = new PeriodFormatterBuilder()
+        periodFormatter = new PeriodFormatterBuilder()
                 .appendHours()
                 .appendSeparatorIfFieldsBefore(".")
                 .appendMinutes()
@@ -52,14 +53,14 @@ public class ResultParser {
         List<FormattedCompetitor> competitors = new ArrayList<FormattedCompetitor>();
         for (Node n : xml.getChildren(classResult)) {
             if (xml.hasNodeName(n, "PersonResult")) {
-                competitors.add(formatCompetitor(n, controls));
+                competitors.add(resultFormatter.format(getCompetitor(n, controls)));
             }
         }
         String classShortName = xml.getText(xml.getChild(classResult, "ClassShortName"));
         return new ClassResult(classShortName, competitors);
     }
 
-    private FormattedCompetitor formatCompetitor(Node node, Deque<Control> controls) {
+    private Competitor getCompetitor(Node node, Deque<Control> controls) {
         Node person = xml.getChild(node, "Person");
         Node result = xml.getChild(node, "Result");
         Node statusNode = xml.getChild(result, "CompetitorStatus");
@@ -74,8 +75,7 @@ public class ResultParser {
         String fullName = xml.getFullName(xml.getChild(person, "PersonName"));
         Deque<String> laps = getLaps(result, total);
 
-        Competitor r = new Competitor(fullName, time, status, splits, id, laps);
-        return r.format();
+        return new Competitor(fullName, time, status, splits, id, laps);
     }
 
     private List<Split> getAllSplits(Node parent, Deque<Control> controls, Period total) {
@@ -97,7 +97,7 @@ public class ResultParser {
     private Deque<String> getLaps(Node result, Period total) {
         Deque<String> laps = new ArrayDeque<String>();
         for (Period lap : getLaps0(result, total)) {
-            laps.add(lap.toString(formatter));
+            laps.add(lap.toString(periodFormatter));
         }
         return laps;
     }

@@ -22,6 +22,10 @@ public class FormattedSplit {
         this.time = time.toString(formatter);
     }
 
+    public FormattedSplit(Split split) {
+        this(split.getTime(), split.getControl());
+    }
+
     public String getTime() {
         return time;
     }

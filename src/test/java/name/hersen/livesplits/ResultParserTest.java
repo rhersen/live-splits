@@ -21,12 +21,15 @@ public class ResultParserTest {
     public void setUp() throws Exception {
         XmlHelper xmlHelper = new XmlHelper();
 
+        ResultFormatter resultFormatter = new ResultFormatter();
+
         CourseParser courseParser = new CourseParser();
         courseParser.xml = xmlHelper;
 
         target = new ResultParser();
         target.xml = xmlHelper;
         target.courseParser = courseParser;
+        target.resultFormatter = resultFormatter;
     }
 
     @Test
@@ -70,8 +73,13 @@ public class ResultParserTest {
         FormattedCompetitor competitor = l.getList().get(1);
         assertEquals("Amanda Berggren", competitor.getName());
         assertEquals("26.02", competitor.getTime());
-        assertEquals("11.52", competitor.getSplits().get(4).getTime());
+        assertEquals("11.52", gs(competitor).get(4).getTime());
     }
+
+    private ArrayList<FormattedSplit> gs(FormattedCompetitor competitor) {
+        return new ArrayList<FormattedSplit>(competitor.getSplits());
+    }
+
     @Test
     public void splitsShouldHaveControls() throws Exception {
         List<ClassResult> classes = testParseResultList("splits.xml");
@@ -83,25 +91,25 @@ public class ResultParserTest {
         assertEquals("Tilda Andersson", competitor.getName());
         assertEquals("23493", competitor.getId());
         assertEquals("20.05", competitor.getTime());
-        assertEquals("10.35", competitor.getSplits().get(4).getTime());
+        assertEquals("10.35", gs(competitor).get(4).getTime());
 
-        FormattedSplit split = competitor.getSplits().get(4);
+        FormattedSplit split = gs(competitor).get(4);
         assertEquals("10.35", split.getTime());
         Control control = split.getControl();
         assertEquals("55", control.getCode());
 
-        split = competitor.getSplits().get(5);
+        split = gs(competitor).get(5);
         assertEquals("12.02", split.getTime());
 
-        split = competitor.getSplits().get(8);
+        split = gs(competitor).get(8);
         assertEquals("20.05", split.getTime());
 
-        split = competitor.getSplits().get(0);
+        split = gs(competitor).get(0);
         assertEquals("00", split.getTime());
         control = split.getControl();
         assertEquals("S1", control.getCode());
 
-        split = competitor.getSplits().get(8);
+        split = gs(competitor).get(8);
         assertEquals("20.05", split.getTime());
         control = split.getControl();
         assertEquals("M1", control.getCode());

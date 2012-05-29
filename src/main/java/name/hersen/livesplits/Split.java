@@ -15,7 +15,7 @@ public class Split {
         return control;
     }
 
-    public FormattedSplit format() {
-        return new FormattedSplit(time, getControl());
+    public Period getTime() {
+        return time;
     }
 }
