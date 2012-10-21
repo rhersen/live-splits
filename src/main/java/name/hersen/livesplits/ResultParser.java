@@ -1,8 +1,7 @@
 package name.hersen.livesplits;
 
 import org.apache.xerces.parsers.DOMParser;
-import org.joda.time.Period;
-import org.joda.time.ReadablePeriod;
+import org.joda.time.*;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +21,10 @@ public class ResultParser {
     @Autowired CourseParser courseParser;
     @Autowired ResultFormatter resultFormatter;
     private final PeriodFormatter periodFormatter;
+    private long sequence;
 
     public ResultParser() {
-        periodParser = new PeriodFormatterBuilder().appendHours().appendLiteral(":").appendMinutes().appendLiteral(":").appendSeconds().toFormatter();
+        periodParser = new PeriodFormatterBuilder().appendSeconds().appendSeparator(".").appendLiteral("0").toFormatter();
         periodFormatter = new PeriodFormatterBuilder()
                 .appendHours()
                 .appendSeparatorIfFieldsBefore(".")
@@ -56,38 +56,47 @@ public class ResultParser {
                 competitors.add(resultFormatter.format(getCompetitor(n, controls)));
             }
         }
-        String classShortName = xml.getText(xml.getChild(classResult, "ClassShortName"));
+        String classShortName = xml.getText(xml.getChild(xml.getChild(classResult, "Class"), "Name"));
         return new ClassResult(classShortName, competitors);
     }
 
     private Competitor getCompetitor(Node node, Deque<Control> controls) {
         Node person = xml.getChild(node, "Person");
         Node result = xml.getChild(node, "Result");
-        Node statusNode = xml.getChild(result, "CompetitorStatus");
 
         String t = xml.getText(xml.getChild(result, "Time"));
-        Period total = t != null ? Period.parse(t, periodParser) : new Period(0);
-        Period time = t != null ? total : null;
+        String status = xml.getText(xml.getChild(result, "Status"));
+        double totalSeconds = t != null ? Double.valueOf(t) : 0.0;
+        Duration total = Duration.standardSeconds((long) totalSeconds);
+        Duration time = t != null ? total : null;
 
-        String status = statusNode.getAttributes().getNamedItem("value").getTextContent();
-        List<Split> splits = getAllSplits(result, controls, total);
-        String id = xml.getChild(person, "PersonId").getTextContent();
-        String fullName = xml.getFullName(xml.getChild(person, "PersonName"));
-        Deque<String> laps = getLaps(result, total);
+        List<Split> splits = getAllSplits(result, controls, total.toPeriod());
+        String id = getId(person);
+        String fullName = xml.getFullName(xml.getChild(person, "Name"));
+        Deque<String> laps = getLaps(result, total.toPeriod());
 
         return new Competitor(fullName, time, status, splits, id, laps);
     }
 
+    private String getId(Node person) {
+        Node id = xml.getChild(person, "Id");
+        if (id == null) {
+            return "" + (++sequence);
+        }
+        return id.getTextContent();
+    }
+
     private List<Split> getAllSplits(Node parent, Deque<Control> controls, Period total) {
         List<Split> r = new ArrayList<Split>();
-        Period p = new Period(0);
-        r.add(new Split(controls.getFirst(), p));
+        Duration p = new Duration(0);
+        r.add(new Split(controls.getFirst(), p.toPeriod()));
         for (Node n : xml.getChildrenWithName(parent, "SplitTime")) {
             Node t = xml.getChild(n, "Time");
             if (t != null) {
-                p = Period.parse(t.getTextContent(), periodParser);
+                String textContent = t.getTextContent();
+                p = Duration.standardSeconds((long) Double.parseDouble(textContent));
                 Control c = findByControlCode(controls, xml.getChild(n, "ControlCode").getTextContent());
-                r.add(new Split(c, p));
+                r.add(new Split(c, p.toPeriod()));
             }
         }
         r.add(new Split(controls.getLast(), total));

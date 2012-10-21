@@ -1,2609 +1,4360 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ResultList SYSTEM "iofData.dtd">
- <ResultList status="snapshot">
-  <IOFVersion version="2.0.3"></IOFVersion>
-  <Event eventForm="IndSingleDay">
-   <EventId idManager="SWE" type="nat">3334</EventId>
-   <Name>Natt-KM ungdom</Name>
-   <EventClassification>
-    <EventClassificationId idManager="SWE" type="nat">5</EventClassificationId>
-    <Name>Klubbtävling/träning</Name>
-   </EventClassification>
-   <StartDate>
-    <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-   </StartDate>
-   <FinishDate>
-    <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-   </FinishDate>
+ <ResultList createTime="2012-10-20T12:42:18+02:00" creator="OLA 5.0.17-1" iofVersion="3.0" status="Snapshot" xmlns="http://www.orienteering.org/datastandard/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Event>
+   <Id>4632</Id>
+   <Name>Motionsorientering – Brantbrink</Name>
+   <StartTime>
+    <Date>2012-09-04</Date>
+   </StartTime>
+   <EndTime>
+    <Date>2012-09-04</Date>
+   </EndTime>
    <Organiser>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
+    <Id>410</Id>
+    <Name>Tullinge Sportklubb</Name>
+    <ShortName>Tullinge SK</ShortName>
+    <Country code="SWE"></Country>
    </Organiser>
-   <EventRace>
-    <EventRaceId>3545</EventRaceId>
-    <Name>Etapp</Name>
-    <RaceDate>
-     <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-     <Clock clockFormat="HH:MM:SS">17:30:00</Clock>
-    </RaceDate>
-   </EventRace>
   </Event>
   <ClassResult>
-   <ClassShortName>H16</ClassShortName>
+   <Class>
+    <Id>97</Id>
+    <Name>ÖM4</Name>
+   </Class>
    <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Hultqvist</Family>
-      <Given sequence="1">Andreas</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">9841</PersonId>
+    <Person>
+     <Name>
+      <Family>Klintemar</Family>
+      <Given>Mattias</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
      <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:43:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:21:56</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:38:12</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>5</CourseVariationId>
-      <CourseLength>5630</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:16:40+02:00</StartTime>
+     <FinishTime>2012-09-04T18:50:02+02:00</FinishTime>
+     <Time>2002.0</Time>
+     <Position>1</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>3</Id>
+      <Name>4</Name>
+      <Length>4510</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>21.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>151.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:54</Time>
+      <Time>242.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:04:17</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:42</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
+     <SplitTime>
       <ControlCode>39</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:11:03</Time>
+      <Time>321.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>42</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:21:31</Time>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>593.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>43</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:54</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
+     <SplitTime>
       <ControlCode>45</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:31:37</Time>
+      <Time>699.0</Time>
      </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:32:41</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:35:03</Time>
-     </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:36:47</Time>
-     </SplitTime>
-     <SplitTime sequence="11">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:37:44</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:22:21</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Bengtsson</Family>
-      <Given sequence="1">Daniel</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">11977</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:39:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:19:18</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:39:35</Time>
-     <ResultPosition>2</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>5</CourseVariationId>
-      <CourseLength>5630</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:10</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:49</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:19</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>39</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:09</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>42</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:53</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>43</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:07</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>45</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:33:20</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:34:27</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:37:01</Time>
-     </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:38:11</Time>
-     </SplitTime>
-     <SplitTime sequence="11">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:39:11</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:19:31</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Sundqvist</Family>
-      <Given sequence="1">Niklas</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">17218</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:41:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:22:14</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:40:30</Time>
-     <ResultPosition>3</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>5</CourseVariationId>
-      <CourseLength>5630</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:04</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:34</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:13</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>39</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:53</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>42</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:24:07</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>43</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:32</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>45</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:33:17</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:34:20</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:37:00</Time>
-     </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:38:50</Time>
-     </SplitTime>
-     <SplitTime sequence="11">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:40:07</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:22:52</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Blomdahl</Family>
-      <Given sequence="1">Anton</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">16630</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:37:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:19:31</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:41:47</Time>
-     <ResultPosition>4</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>5</CourseVariationId>
-      <CourseLength>5630</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:22</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:53</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:23</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>39</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:47</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>42</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:57</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>43</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:27:14</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>45</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:35:09</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:36:30</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:39:05</Time>
-     </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:40:15</Time>
-     </SplitTime>
-     <SplitTime sequence="11">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:41:20</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:19:44</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Andersson</Family>
-      <Given sequence="1">Emil</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">11785</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:35:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:21:24</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:45:40</Time>
-     <ResultPosition>5</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>5</CourseVariationId>
-      <CourseLength>5630</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:54</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:05</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:06:49</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>39</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:48</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>42</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:20</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>43</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:31:27</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>45</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:39:19</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:40:27</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:42:55</Time>
-     </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:44:09</Time>
-     </SplitTime>
-     <SplitTime sequence="11">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:45:14</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">S</BadgeValueId>
-      <Name>Silver</Name>
-      <ShortName>S</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:22:20</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-  </ClassResult>
-  <ClassResult>
-   <ClassShortName>D16</ClassShortName>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Engstedt</Family>
-      <Given sequence="1">Linnéa</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">11359</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:36:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:13:56</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:37:12</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>4</CourseVariationId>
-      <CourseLength>4370</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:40</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:41</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:10:13</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>39</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:16:28</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
+     <SplitTime>
       <ControlCode>40</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:18:03</Time>
+      <Time>903.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
+     <SplitTime>
       <ControlCode>41</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:36</Time>
+      <Time>962.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
+     <SplitTime>
       <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:30:58</Time>
+      <Time>1139.0</Time>
      </SplitTime>
-     <SplitTime sequence="8">
+     <SplitTime>
       <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:33:55</Time>
+      <Time>1326.0</Time>
      </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:35:21</Time>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1535.0</Time>
      </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:36:40</Time>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1746.0</Time>
      </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:14:30</Clock>
-     </ModifyDate>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>1861.0</Time>
+     </SplitTime>
     </Result>
    </PersonResult>
    <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>van de Voorde</Family>
-      <Given sequence="1">Magdalena</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">29505</PersonId>
+    <Person>
+     <Id>86715</Id>
+     <Name>
+      <Family>Knutar</Family>
+      <Given>Irene</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
      <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:40:46</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:19:39</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:38:53</Time>
-     <ResultPosition>2</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>4</CourseVariationId>
-      <CourseLength>4370</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:19:38+02:00</StartTime>
+     <FinishTime>2012-09-04T18:54:46+02:00</FinishTime>
+     <Time>2108.0</Time>
+     <TimeBehind>106.0</TimeBehind>
+     <Position>2</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>3</Id>
+      <Name>4</Name>
+      <Length>4510</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>28.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>167.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:54</Time>
+      <Time>327.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:06:33</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:08:27</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
+     <SplitTime>
       <ControlCode>39</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:16:32</Time>
+      <Time>414.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>631.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>767.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>40</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:12</Time>
+      <Time>903.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
+     <SplitTime>
       <ControlCode>41</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:26:39</Time>
+      <Time>975.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
+     <SplitTime>
       <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:32:17</Time>
+      <Time>1187.0</Time>
      </SplitTime>
-     <SplitTime sequence="8">
+     <SplitTime>
       <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:36:00</Time>
+      <Time>1414.0</Time>
      </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:37:18</Time>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1649.0</Time>
      </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:38:26</Time>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1856.0</Time>
      </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:19:50</Clock>
-     </ModifyDate>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>1961.0</Time>
+     </SplitTime>
     </Result>
    </PersonResult>
    <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Lengquist</Family>
-      <Given sequence="1">Alexandra</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">16629</PersonId>
+    <Person>
+     <Name>
+      <Family>Johansson</Family>
+      <Given>Tommy</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:34:46</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:24:59</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:50:13</Time>
-     <ResultPosition>3</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>4</CourseVariationId>
-      <CourseLength>4370</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:26:17+02:00</StartTime>
+     <FinishTime>2012-09-04T19:08:58+02:00</FinishTime>
+     <Status>MissingPunch</Status>
+     <Course>
+      <Id>3</Id>
+      <Name>4</Name>
+      <Length>4510</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>31.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>177.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:43</Time>
+      <Time>347.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:48</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:10:16</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
+     <SplitTime>
       <ControlCode>39</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:20</Time>
+      <Time>423.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>40</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:21:16</Time>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>725.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>41</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:31:58</Time>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:40:47</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:45:59</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:48:00</Time>
-     </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:49:38</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">S</BadgeValueId>
-      <Name>Silver</Name>
-      <ShortName>S</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:25:11</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Rajala</Family>
-      <Given sequence="1">Elsa</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">29279</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:38:46</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:03:41</Clock>
-     </FinishTime>
-     <CompetitorStatus value="MisPunch"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>4</CourseVariationId>
-      <CourseLength>4370</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>33</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:41</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:52</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>36</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:16</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>39</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="5">
+     <SplitTime>
       <ControlCode>40</ControlCode>
      </SplitTime>
-     <SplitTime sequence="6">
+     <SplitTime>
       <ControlCode>41</ControlCode>
      </SplitTime>
-     <SplitTime sequence="7">
+     <SplitTime>
       <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:16:40</Time>
      </SplitTime>
-     <SplitTime sequence="8">
+     <SplitTime>
       <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:20:54</Time>
      </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:22:36</Time>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
      </SplitTime>
-     <SplitTime sequence="10">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:24:22</Time>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
      </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:03:54</Clock>
-     </ModifyDate>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+     </SplitTime>
     </Result>
    </PersonResult>
   </ClassResult>
   <ClassResult>
-   <ClassShortName>H12</ClassShortName>
+   <Class>
+    <Id>98</Id>
+    <Name>ÖM5</Name>
+   </Class>
    <PersonResult>
-    <Person sex="M">
-     <PersonName>
+    <Person>
+     <Id>5959</Id>
+     <Name>
+      <Family>Sjöberg</Family>
+      <Given>Jessica</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:27:39+02:00</StartTime>
+     <FinishTime>2012-09-04T18:55:34+02:00</FinishTime>
+     <Time>1675.0</Time>
+     <Position>1</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>68.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>175.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>273.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>425.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>554.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>692.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>896.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1169.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1278.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1441.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>1511.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>15599</Id>
+     <Name>
+      <Family>Tärnrot</Family>
+      <Given>Clas</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:18:56+02:00</StartTime>
+     <FinishTime>2012-09-04T18:47:12+02:00</FinishTime>
+     <Time>1696.0</Time>
+     <TimeBehind>21.0</TimeBehind>
+     <Position>2</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>68.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>174.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>301.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>408.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>566.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>705.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>910.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1193.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1297.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1470.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>1538.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>6088</Id>
+     <Name>
+      <Family>Kärrström</Family>
+      <Given>Anders</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:18:13+02:00</StartTime>
+     <FinishTime>2012-09-04T18:47:17+02:00</FinishTime>
+     <Time>1744.0</Time>
+     <TimeBehind>69.0</TimeBehind>
+     <Position>3</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>72.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>187.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>288.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>377.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>520.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>709.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>938.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1223.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1331.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1505.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>1579.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Bolander</Family>
+      <Given>Magnus</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>348</Id>
+     <Name>Snättringe Sportklubb</Name>
+     <ShortName>Snättringe SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:47:01+02:00</StartTime>
+     <FinishTime>2012-09-04T19:23:05+02:00</FinishTime>
+     <Time>2164.0</Time>
+     <TimeBehind>489.0</TimeBehind>
+     <Position>4</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>190.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>294.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>416.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>535.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>704.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>888.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1144.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1529.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1657.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1899.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2000.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Hainke</Family>
+      <Given>Mats</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>348</Id>
+     <Name>Snättringe Sportklubb</Name>
+     <ShortName>Snättringe SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:29:47+02:00</StartTime>
+     <FinishTime>2012-09-04T18:06:56+02:00</FinishTime>
+     <Time>2229.0</Time>
+     <TimeBehind>554.0</TimeBehind>
+     <Position>5</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>85.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>192.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>353.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>455.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>622.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>947.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1194.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1625.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1751.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1971.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2057.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>5406</Id>
+     <Name>
+      <Family>Reger</Family>
+      <Given>Björn</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>637</Id>
+     <Name>Stora Tuna Orienteringsklubb</Name>
+     <ShortName>Stora Tuna OK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:23:50+02:00</StartTime>
+     <FinishTime>2012-09-04T19:01:50+02:00</FinishTime>
+     <Time>2280.0</Time>
+     <TimeBehind>605.0</TimeBehind>
+     <Position>6</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>90.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>228.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>344.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>472.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>640.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>836.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1124.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1530.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1667.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1882.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2078.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>334</Id>
+     <Name>
+      <Family>Bratt</Family>
+      <Given>Maria</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:16:35+02:00</StartTime>
+     <FinishTime>2012-09-04T18:54:57+02:00</FinishTime>
+     <Time>2302.0</Time>
+     <TimeBehind>627.0</TimeBehind>
+     <Position>7</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>82.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>234.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>362.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>480.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>637.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>812.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1052.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1414.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1729.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1986.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2112.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>12262</Id>
+     <Name>
+      <Family>Bergman</Family>
+      <Given>Torbjörn</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:32:25+02:00</StartTime>
+     <FinishTime>2012-09-04T18:10:55+02:00</FinishTime>
+     <Time>2310.0</Time>
+     <TimeBehind>635.0</TimeBehind>
+     <Position>8</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>73.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>190.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>299.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>409.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>577.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>788.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1011.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1368.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1504.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1974.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2098.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Envall</Family>
+      <Given>Annika</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:24:14+02:00</StartTime>
+     <FinishTime>2012-09-04T19:04:00+02:00</FinishTime>
+     <Time>2386.0</Time>
+     <TimeBehind>711.0</TimeBehind>
+     <Position>9</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>74.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>207.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>324.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>453.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>609.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>815.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1027.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1389.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1645.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>1837.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2201.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Härmark</Family>
+      <Given>Johan</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:57:31+02:00</StartTime>
+     <FinishTime>2012-09-04T18:38:06+02:00</FinishTime>
+     <Time>2435.0</Time>
+     <TimeBehind>760.0</TimeBehind>
+     <Position>10</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>208.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>388.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>520.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>659.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>879.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1106.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1448.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1800.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1918.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2142.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2233.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Olsson</Family>
+      <Given>Anna-Karin</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:17:14+02:00</StartTime>
+     <FinishTime>2012-09-04T18:58:10+02:00</FinishTime>
+     <Time>2456.0</Time>
+     <TimeBehind>781.0</TimeBehind>
+     <Position>11</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>112.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>283.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>449.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>578.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>766.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>988.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1286.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1762.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1909.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2139.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2246.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
       <Family>Andersson</Family>
-      <Given sequence="1">Albin</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">14022</PersonId>
+      <Given>Rikard</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:37:42</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">18:52:16</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:14:34</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>2</CourseVariationId>
-      <CourseLength>2470</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:06</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>35</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:06:06</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:08:33</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>47</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:41</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:27</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>51</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:29</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:12</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">18:52:23</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Forsberg</Family>
-      <Given sequence="1">Oskar</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">29506</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:35:42</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">18:56:53</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:21:11</Time>
-     <ResultPosition>2</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>2</CourseVariationId>
-      <CourseLength>2470</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:04:08</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>35</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:08:14</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:16</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>47</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:42</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:16:58</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>51</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:18:33</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:20:39</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">B</BadgeValueId>
-      <Name>Brons</Name>
-      <ShortName>B</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">18:57:09</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Berggren</Family>
-      <Given sequence="1">Olle</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">17003</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:43:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:07:44</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:24:01</Time>
-     <ResultPosition>3</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>2</CourseVariationId>
-      <CourseLength>2470</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:05</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>35</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:11:23</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:01</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>47</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:15:34</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:18:55</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>51</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:20:48</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:32</Time>
-     </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:07:53</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Arkäng</Family>
-      <Given sequence="1">Lukas</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">17180</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:41:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:11:47</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:30:04</Time>
-     <ResultPosition>4</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>2</CourseVariationId>
-      <CourseLength>2470</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:03:43</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>35</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:33</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:17:19</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>47</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:47</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:53</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>51</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:59</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:29:36</Time>
-     </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:11:55</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Dovander</Family>
-      <Given sequence="1">Marcus</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">29565</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:39:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:18:04</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:38:20</Time>
-     <ResultPosition>5</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>2</CourseVariationId>
-      <CourseLength>2470</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:04</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>35</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:48</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:17</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>47</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:22:18</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:31:42</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>51</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:34:44</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:37:52</Time>
-     </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:18:13</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Bryngelsson</Family>
-      <Given sequence="1">Ruben</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat"></PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:48:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:08:24</Clock>
-     </FinishTime>
-     <CompetitorStatus value="MisPunch"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>2</CourseVariationId>
-      <CourseLength>2470</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:50</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>35</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:49</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:11:08</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>47</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:43</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:16:56</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>51</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:18:30</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-     </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:32:25</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-  </ClassResult>
-  <ClassResult>
-   <ClassShortName>D14</ClassShortName>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Skog</Family>
-      <Given sequence="1">Märta</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">21236</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:42:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:08:31</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:25:48</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:00:55</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:55</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:06:19</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:56:11+02:00</StartTime>
+     <FinishTime>2012-09-04T18:38:00+02:00</FinishTime>
+     <Time>2509.0</Time>
+     <TimeBehind>834.0</TimeBehind>
+     <Position>12</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
       <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:10:29</Time>
+      <Time>270.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:17:02</Time>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>390.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:22</Time>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>492.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:22:23</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:57</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:16</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:08:39</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Berggren</Family>
-      <Given sequence="1">Amanda</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">15789</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:36:46</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:02:48</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:26:02</Time>
-     <ResultPosition>2</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:03</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:03:06</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:42</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:11:52</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:17:46</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:50</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:22:47</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:24:14</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:36</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:02:56</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Leickt</Family>
-      <Given sequence="1">Ebba</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">13213</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:44:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:17:31</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:32:48</Time>
-     <ResultPosition>3</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:14</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:03:51</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:10</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:15:07</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:21:36</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:24:30</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:28:49</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:30:33</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:32:18</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">S</BadgeValueId>
-      <Name>Silver</Name>
-      <ShortName>S</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:17:44</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Längheim</Family>
-      <Given sequence="1">Caroline</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">14024</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:38:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:13:46</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:35:02</Time>
-     <ResultPosition>4</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:03</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:03:46</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:24</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:31</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:22:44</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:39</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:30:15</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:32:35</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:34:28</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">S</BadgeValueId>
-      <Name>Silver</Name>
-      <ShortName>S</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:14:01</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Blomdahl</Family>
-      <Given sequence="1">Amanda</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">16627</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:40:45</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:17:34</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:36:49</Time>
-     <ResultPosition>5</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:42</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:04:09</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:55</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:09</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:51</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:28:21</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:32:48</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:34:34</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:36:20</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">S</BadgeValueId>
-      <Name>Silver</Name>
-      <ShortName>S</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:17:50</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Forsberg</Family>
-      <Given sequence="1">Frida</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">8796</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:34:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:11:50</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:37:07</Time>
-     <ResultPosition>6</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:14</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:03:56</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:47</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:15:28</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:19</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:27:25</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:30:57</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:34:25</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:36:29</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">B</BadgeValueId>
-      <Name>Brons</Name>
-      <ShortName>B</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:12:04</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-  </ClassResult>
-  <ClassResult>
-   <ClassShortName>D10</ClassShortName>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Bolin</Family>
-      <Given sequence="1">Klara</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">29566</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:45:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:04:13</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:18:29</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>1</CourseVariationId>
-      <CourseLength>1870</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>52</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:43</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>53</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:04:00</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
+     <SplitTime>
       <ControlCode>54</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:05</Time>
+      <Time>594.0</Time>
      </SplitTime>
-     <SplitTime sequence="4">
+     <SplitTime>
       <ControlCode>55</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:10:13</Time>
+      <Time>978.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>56</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:11:46</Time>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1176.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:57</Time>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1491.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:17:52</Time>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1874.0</Time>
      </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:04:20</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Andersson</Family>
-      <Given sequence="1">Tilda</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">23493</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:47:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:07:49</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:20:05</Time>
-     <ResultPosition>2</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>1</CourseVariationId>
-      <CourseLength>1870</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>52</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:40</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>53</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:04:31</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>54</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:31</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>55</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:10:35</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>56</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:02</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:15:03</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:36</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:08:00</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-  </ClassResult>
-  <ClassResult>
-   <ClassShortName>D12</ClassShortName>
-   <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Längheim</Family>
-      <Given sequence="1">Lovisa</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">20863</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:48:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:08:56</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:20:13</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>2</CourseVariationId>
-      <CourseLength>2470</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:48</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>35</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:07:42</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:11:01</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>47</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:39</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:17:02</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
+     <SplitTime>
       <ControlCode>51</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:18:41</Time>
+      <Time>2012.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:41</Time>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2235.0</Time>
      </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:09:04</Clock>
-     </ModifyDate>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2327.0</Time>
+     </SplitTime>
     </Result>
    </PersonResult>
    <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Karlberg</Family>
-      <Given sequence="1">Trine</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">16961</PersonId>
+    <Person>
+     <Id>36393</Id>
+     <Name>
+      <Family>Molander</Family>
+      <Given>Anna</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:46:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:13:43</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:26:59</Time>
-     <ResultPosition>2</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>2</CourseVariationId>
-      <CourseLength>2470</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:03:13</Time>
+    <Organisation>
+     <Id>399</Id>
+     <Name>Orienteringsklubben Tor</Name>
+     <ShortName>OK Tor</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:15:00+02:00</StartTime>
+     <FinishTime>2012-09-04T17:56:52+02:00</FinishTime>
+     <Time>2512.0</Time>
+     <TimeBehind>837.0</TimeBehind>
+     <Position>13</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>113.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>35</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:08:16</Time>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>273.0</Time>
      </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:11:47</Time>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>413.0</Time>
      </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>47</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:36</Time>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>567.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:30</Time>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>776.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1150.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1424.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1783.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>51</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:35</Time>
+      <Time>1960.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:26:33</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">S</BadgeValueId>
-      <Name>Silver</Name>
-      <ShortName>S</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:13:52</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-  </ClassResult>
-  <ClassResult>
-   <ClassShortName>H14</ClassShortName>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Andersson</Family>
-      <Given sequence="1">Olle</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">12007</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:49:42</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:09:15</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:19:33</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:00:49</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:21</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:04:59</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:08:20</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:42</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:19</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:16:36</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:18:07</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:10</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:09:32</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Imark</Family>
-      <Given sequence="1">Simon</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">13263</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:53:42</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:14:06</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:20:24</Time>
-     <ResultPosition>2</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:00:47</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:19</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:50</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:10</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:21</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:39</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:17:03</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:18:53</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:59</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:14:58</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Imark</Family>
-      <Given sequence="1">Victor</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">13262</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:55:44</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:16:46</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:21:02</Time>
-     <ResultPosition>3</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:00:51</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:29</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:33</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:20</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:27</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:58</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:17:36</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:36</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:20:36</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:16:57</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Skog</Family>
-      <Given sequence="1">Olle</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">11354</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:51:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:13:54</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:22:11</Time>
-     <ResultPosition>4</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:00:51</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:51</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:06:16</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:47</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:30</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:16:02</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:19:11</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:20:20</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:21:44</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">S</BadgeValueId>
-      <Name>Silver</Name>
-      <ShortName>S</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:14:27</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Falck</Family>
-      <Given sequence="1">Max</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">29507</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:47:43</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:45:19</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:57:36</Time>
-     <ResultPosition>5</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:03</Time>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:10</Time>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:13:59</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:21:08</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:31:47</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:38:09</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:51:57</Time>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:54:47</Time>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:56:58</Time>
-     </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:45:30</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Stålhammar</Family>
-      <Given sequence="1">Simon</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat"></PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:39:00</Clock>
-     </StartTime>
-     <Time timeFormat="HH:MM:SS">00:00:00</Time>
-     <CompetitorStatus value="DidNotStart"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>3</CourseVariationId>
-      <CourseLength>3250</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>31</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>32</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>34</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>37</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>44</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>46</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>48</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="8">
-      <ControlCode>50</ControlCode>
-     </SplitTime>
-     <SplitTime sequence="9">
-      <ControlCode>100</ControlCode>
-     </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:26:18</Clock>
-     </ModifyDate>
-    </Result>
-   </PersonResult>
-  </ClassResult>
-  <ClassResult>
-   <ClassShortName>H10</ClassShortName>
-   <PersonResult>
-    <Person sex="M">
-     <PersonName>
-      <Family>Längheim</Family>
-      <Given sequence="1">Alfred</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">21310</PersonId>
-    </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:34:45</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">18:48:08</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:13:23</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>1</CourseVariationId>
-      <CourseLength>1870</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
+     <SplitTime>
       <ControlCode>52</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:07</Time>
+      <Time>2195.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
+     <SplitTime>
       <ControlCode>53</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:02:48</Time>
+      <Time>2299.0</Time>
      </SplitTime>
-     <SplitTime sequence="3">
-      <ControlCode>54</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:04:23</Time>
-     </SplitTime>
-     <SplitTime sequence="4">
-      <ControlCode>55</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:06:53</Time>
-     </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>56</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:08:15</Time>
-     </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:11:03</Time>
-     </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:12:51</Time>
-     </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">18:49:18</Clock>
-     </ModifyDate>
     </Result>
    </PersonResult>
-  </ClassResult>
-  <ClassResult>
-   <ClassShortName>U</ClassShortName>
    <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Leickt</Family>
-      <Given sequence="1">Katja</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">35913</PersonId>
+    <Person>
+     <Name>
+      <Family>Öqvist</Family>
+      <Given>Torbjörn</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:52:45</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:21:13</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:28:28</Time>
-     <ResultPosition>1</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>1</CourseVariationId>
-      <CourseLength>1870</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>52</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:55</Time>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:45:27+02:00</StartTime>
+     <FinishTime>2012-09-04T19:28:13+02:00</FinishTime>
+     <Time>2566.0</Time>
+     <TimeBehind>891.0</TimeBehind>
+     <Position>14</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>108.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>53</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:05:34</Time>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>289.0</Time>
      </SplitTime>
-     <SplitTime sequence="3">
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>445.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>54</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:05</Time>
+      <Time>565.0</Time>
      </SplitTime>
-     <SplitTime sequence="4">
+     <SplitTime>
       <ControlCode>55</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:14:50</Time>
+      <Time>744.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>56</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:16:47</Time>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>969.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:23:18</Time>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1282.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:27:43</Time>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1716.0</Time>
      </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:21:26</Clock>
-     </ModifyDate>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1955.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2233.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2363.0</Time>
+     </SplitTime>
     </Result>
    </PersonResult>
    <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Leickt</Family>
-      <Given sequence="1">Wilma</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">29883</PersonId>
+    <Person>
+     <Id>5933</Id>
+     <Name>
+      <Family>Persson-Hadmark</Family>
+      <Given>Eva</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
      <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:50:45</Clock>
-     </StartTime>
-     <FinishTime>
-      <Clock clockFormat="HH:MM:SS">19:21:14</Clock>
-     </FinishTime>
-     <Time timeFormat="HH:MM:SS">00:30:29</Time>
-     <ResultPosition>2</ResultPosition>
-     <CompetitorStatus value="OK"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>1</CourseVariationId>
-      <CourseLength>1870</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>52</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:01:56</Time>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:22:13+02:00</StartTime>
+     <FinishTime>2012-09-04T19:05:36+02:00</FinishTime>
+     <Time>2603.0</Time>
+     <TimeBehind>928.0</TimeBehind>
+     <Position>15</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>123.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>53</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:06:08</Time>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>262.0</Time>
      </SplitTime>
-     <SplitTime sequence="3">
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>453.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>54</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:09:46</Time>
+      <Time>565.0</Time>
      </SplitTime>
-     <SplitTime sequence="4">
+     <SplitTime>
       <ControlCode>55</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:15:28</Time>
+      <Time>749.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>56</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:18:12</Time>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>972.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>49</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:25:11</Time>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1250.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
-      <Time timeFormat="HH:MM:SS">00:29:42</Time>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1729.0</Time>
      </SplitTime>
-     <BadgeValue>
-      <BadgeValueId idManager="SWE" type="nat">G</BadgeValueId>
-      <Name>Guld</Name>
-      <ShortName>G</ShortName>
-     </BadgeValue>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:22:19</Clock>
-     </ModifyDate>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>2001.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2232.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2392.0</Time>
+     </SplitTime>
     </Result>
    </PersonResult>
    <PersonResult>
-    <Person sex="F">
-     <PersonName>
+    <Person>
+     <Name>
+      <Family>Larsson</Family>
+      <Given>Malin</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:48:25+02:00</StartTime>
+     <FinishTime>2012-09-04T18:36:15+02:00</FinishTime>
+     <Time>2870.0</Time>
+     <TimeBehind>1195.0</TimeBehind>
+     <Position>16</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>126.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>274.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>457.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>777.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>949.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1216.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1489.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1929.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>2313.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2562.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2675.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>28528</Id>
+     <Name>
+      <Family>Hoffsten-Arkäng</Family>
+      <Given>Magdalena</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:17:32+02:00</StartTime>
+     <FinishTime>2012-09-04T19:07:53+02:00</FinishTime>
+     <Time>3021.0</Time>
+     <TimeBehind>1346.0</TimeBehind>
+     <Position>17</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>97.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>253.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>430.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>617.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>1022.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1258.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1547.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2158.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>2388.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2680.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2839.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Wallman</Family>
+      <Given>Ulf</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:42:51+02:00</StartTime>
+     <FinishTime>2012-09-04T19:33:32+02:00</FinishTime>
+     <Time>3041.0</Time>
+     <TimeBehind>1366.0</TimeBehind>
+     <Position>18</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>275.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>448.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>748.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>840.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>1063.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1291.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1568.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1999.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>2143.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2734.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2841.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Larsson</Family>
+      <Given>Matilda</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:45:14+02:00</StartTime>
+     <FinishTime>2012-09-04T18:36:12+02:00</FinishTime>
+     <Time>3058.0</Time>
+     <TimeBehind>1383.0</TimeBehind>
+     <Position>19</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>120.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>340.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>479.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>647.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>851.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1102.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1422.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1994.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>2505.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2748.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2868.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Myrberger</Family>
+      <Given>Erik</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:03:42+02:00</StartTime>
+     <FinishTime>2012-09-04T17:58:00+02:00</FinishTime>
+     <Time>3258.0</Time>
+     <TimeBehind>1583.0</TimeBehind>
+     <Position>20</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>278.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>437.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>632.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>789.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>1044.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1339.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1760.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2372.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>2635.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>2902.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3051.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Pütsep</Family>
+      <Given>Julia</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:03:40+02:00</StartTime>
+     <FinishTime>2012-09-04T19:05:45+02:00</FinishTime>
+     <Time>3725.0</Time>
+     <TimeBehind>2050.0</TimeBehind>
+     <Position>21</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>154.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>354.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>585.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>798.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>1143.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1505.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2013.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2691.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>2968.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>3339.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3519.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Arver</Family>
+      <Given>Karin</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:03:41+02:00</StartTime>
+     <FinishTime>2012-09-04T19:05:48+02:00</FinishTime>
+     <Time>3727.0</Time>
+     <TimeBehind>2052.0</TimeBehind>
+     <Position>22</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>148.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>349.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>587.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>803.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>1138.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1505.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1997.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2696.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>2963.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>3325.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3516.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>17204</Id>
+     <Name>
       <Family>Hersén</Family>
-      <Given sequence="1">Josefin</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat">17202</PersonId>
+      <Given>Linnea</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
      <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:48:00</Clock>
-     </StartTime>
-     <Time timeFormat="HH:MM:SS">00:00:00</Time>
-     <CompetitorStatus value="DidNotStart"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>1</CourseVariationId>
-      <CourseLength>1870</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>52</ControlCode>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:26:32+02:00</StartTime>
+     <FinishTime>2012-09-04T19:32:08+02:00</FinishTime>
+     <Time>3936.0</Time>
+     <TimeBehind>2261.0</TimeBehind>
+     <Position>23</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>159.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>53</ControlCode>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>370.0</Time>
      </SplitTime>
-     <SplitTime sequence="3">
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>620.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>54</ControlCode>
+      <Time>837.0</Time>
      </SplitTime>
-     <SplitTime sequence="4">
+     <SplitTime>
       <ControlCode>55</ControlCode>
+      <Time>1187.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>56</ControlCode>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1582.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>49</ControlCode>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2210.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2856.0</Time>
      </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:27:03</Clock>
-     </ModifyDate>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>3144.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>3578.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3735.0</Time>
+     </SplitTime>
     </Result>
    </PersonResult>
    <PersonResult>
-    <Person sex="F">
-     <PersonName>
-      <Family>Bryngelsson</Family>
-      <Given sequence="1">Laban</Given>
-     </PersonName>
-     <PersonId idManager="SWE" type="nat"></PersonId>
+    <Person>
+     <Name>
+      <Family>Johansson</Family>
+      <Given>Björn</Given>
+     </Name>
     </Person>
-    <Club>
-     <ClubId idManager="SWE" type="nat">410</ClubId>
-     <Name>Tullinge SK</Name>
-     <ShortName>Tullinge SK</ShortName>
-     <CountryId value="SWE"></CountryId>
-    </Club>
-    <Result>
-     <StartTime>
-      <Clock clockFormat="HH:MM:SS">18:42:00</Clock>
-     </StartTime>
-     <Time timeFormat="HH:MM:SS">00:00:00</Time>
-     <CompetitorStatus value="DidNotStart"></CompetitorStatus>
-     <CourseVariation>
-      <CourseVariationId>1</CourseVariationId>
-      <CourseLength>1870</CourseLength>
-     </CourseVariation>
-     <SplitTime sequence="1">
-      <ControlCode>52</ControlCode>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:25:47+02:00</StartTime>
+     <FinishTime>2012-09-04T19:32:49+02:00</FinishTime>
+     <Time>4022.0</Time>
+     <TimeBehind>2347.0</TimeBehind>
+     <Position>24</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>376.0</Time>
      </SplitTime>
-     <SplitTime sequence="2">
-      <ControlCode>53</ControlCode>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>512.0</Time>
      </SplitTime>
-     <SplitTime sequence="3">
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>669.0</Time>
+     </SplitTime>
+     <SplitTime>
       <ControlCode>54</ControlCode>
+      <Time>1117.0</Time>
      </SplitTime>
-     <SplitTime sequence="4">
+     <SplitTime>
       <ControlCode>55</ControlCode>
+      <Time>2008.0</Time>
      </SplitTime>
-     <SplitTime sequence="5">
-      <ControlCode>56</ControlCode>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>2173.0</Time>
      </SplitTime>
-     <SplitTime sequence="6">
-      <ControlCode>49</ControlCode>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2385.0</Time>
      </SplitTime>
-     <SplitTime sequence="7">
-      <ControlCode>100</ControlCode>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>3348.0</Time>
      </SplitTime>
-     <ModifyDate>
-      <Date dateFormat="YYYY-MM-SS">2011-10-18</Date>
-      <Clock clockFormat="HH:MM:SS">19:27:03</Clock>
-     </ModifyDate>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>3578.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>3754.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3847.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Andersson</Family>
+      <Given>Marine</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:09:12+02:00</StartTime>
+     <FinishTime>2012-09-04T18:13:35+02:00</FinishTime>
+     <Status>MissingPunch</Status>
+     <Course>
+      <Id>4</Id>
+      <Name>5</Name>
+      <Length>4010</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>37</ControlCode>
+      <Time>333.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>543.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>912.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>1246.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>45</ControlCode>
+      <Time>1678.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2143.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2780.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>3025.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>52</ControlCode>
+      <Time>3448.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3600.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+  </ClassResult>
+  <ClassResult>
+   <Class>
+    <Id>94</Id>
+    <Name>ÖM1</Name>
+   </Class>
+   <PersonResult>
+    <Person>
+     <Id>52083</Id>
+     <Name>
+      <Family>Hainke</Family>
+      <Given>Albin</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>348</Id>
+     <Name>Snättringe Sportklubb</Name>
+     <ShortName>Snättringe SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:28:59+02:00</StartTime>
+     <FinishTime>2012-09-04T17:46:56+02:00</FinishTime>
+     <Time>1077.0</Time>
+     <Position>1</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>1</Id>
+      <Name>1</Name>
+      <Length>2070</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>48.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>32</ControlCode>
+      <Time>185.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>307.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>34</ControlCode>
+      <Time>560.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>35</ControlCode>
+      <Time>643.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>814.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>52064</Id>
+     <Name>
+      <Family>Boräng</Family>
+      <Given>Andreas</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>348</Id>
+     <Name>Snättringe Sportklubb</Name>
+     <ShortName>Snättringe SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:56:31+02:00</StartTime>
+     <FinishTime>2012-09-04T18:20:03+02:00</FinishTime>
+     <Time>1412.0</Time>
+     <TimeBehind>335.0</TimeBehind>
+     <Position>2</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>1</Id>
+      <Name>1</Name>
+      <Length>2070</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>144.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>32</ControlCode>
+      <Time>356.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>475.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>34</ControlCode>
+      <Time>727.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>35</ControlCode>
+      <Time>848.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1094.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Sundberg</Family>
+      <Given>Lisa</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:12:04+02:00</StartTime>
+     <FinishTime>2012-09-04T18:41:44+02:00</FinishTime>
+     <Time>1780.0</Time>
+     <TimeBehind>703.0</TimeBehind>
+     <Position>3</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>1</Id>
+      <Name>1</Name>
+      <Length>2070</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>81.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>32</ControlCode>
+      <Time>292.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>533.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>34</ControlCode>
+      <Time>939.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>35</ControlCode>
+      <Time>1163.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1404.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>9636</Id>
+     <Name>
+      <Family>Perneby</Family>
+      <Given>Sonja</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:46:22+02:00</StartTime>
+     <FinishTime>2012-09-04T18:18:19+02:00</FinishTime>
+     <Time>1917.0</Time>
+     <TimeBehind>840.0</TimeBehind>
+     <Position>4</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>1</Id>
+      <Name>1</Name>
+      <Length>2070</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>290.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>32</ControlCode>
+      <Time>543.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>736.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>34</ControlCode>
+      <Time>1004.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>35</ControlCode>
+      <Time>1145.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1470.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Ekenstedt</Family>
+      <Given>Daniel</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:04:05+02:00</StartTime>
+     <FinishTime>2012-09-04T18:47:45+02:00</FinishTime>
+     <Time>2620.0</Time>
+     <TimeBehind>1543.0</TimeBehind>
+     <Position>5</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>1</Id>
+      <Name>1</Name>
+      <Length>2070</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>238.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>32</ControlCode>
+      <Time>558.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>987.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>34</ControlCode>
+      <Time>1380.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>35</ControlCode>
+      <Time>1669.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>2118.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Ekenstedt</Family>
+      <Given>Sandra</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:04:03+02:00</StartTime>
+     <FinishTime>2012-09-04T18:47:49+02:00</FinishTime>
+     <Time>2626.0</Time>
+     <TimeBehind>1549.0</TimeBehind>
+     <Position>6</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>1</Id>
+      <Name>1</Name>
+      <Length>2070</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>31</ControlCode>
+      <Time>243.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>32</ControlCode>
+      <Time>566.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1004.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>34</ControlCode>
+      <Time>1385.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>35</ControlCode>
+      <Time>1667.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>2128.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+  </ClassResult>
+  <ClassResult>
+   <Class>
+    <Id>99</Id>
+    <Name>ÖM6</Name>
+   </Class>
+   <PersonResult>
+    <Person>
+     <Id>28156</Id>
+     <Name>
+      <Family>Lyth</Family>
+      <Given>Joachim</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:18:45+02:00</StartTime>
+     <FinishTime>2012-09-04T18:57:21+02:00</FinishTime>
+     <Time>2316.0</Time>
+     <Position>1</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>41.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>148.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>239.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>355.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>478.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>810.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1013.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1077.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1254.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1451.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1503.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1571.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1817.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1962.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2146.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>4790</Id>
+     <Name>
+      <Family>Axelsson</Family>
+      <Given>Manfred</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>302</Id>
+     <Name>Orienteringklubben Ravinen</Name>
+     <ShortName>OK Ravinen</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:19:19+02:00</StartTime>
+     <FinishTime>2012-09-04T19:01:09+02:00</FinishTime>
+     <Time>2510.0</Time>
+     <TimeBehind>194.0</TimeBehind>
+     <Position>2</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>43.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>128.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>231.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>348.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>476.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>822.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1006.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1070.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1303.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1486.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1543.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1610.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>1879.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2044.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2330.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Eriksson</Family>
+      <Given>Magnus</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:57:17+02:00</StartTime>
+     <FinishTime>2012-09-04T18:40:50+02:00</FinishTime>
+     <Time>2613.0</Time>
+     <TimeBehind>297.0</TimeBehind>
+     <Position>3</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>57.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>142.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>248.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>383.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>537.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>838.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1049.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1119.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1380.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1601.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1657.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>1728.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2037.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2204.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2438.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>4795</Id>
+     <Name>
+      <Family>Axelsson</Family>
+      <Given>Marita</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>302</Id>
+     <Name>Orienteringklubben Ravinen</Name>
+     <ShortName>OK Ravinen</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:14:22+02:00</StartTime>
+     <FinishTime>2012-09-04T19:03:17+02:00</FinishTime>
+     <Time>2935.0</Time>
+     <TimeBehind>619.0</TimeBehind>
+     <Position>4</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>82.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>186.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>293.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>458.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>629.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1106.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1342.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1415.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1634.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1862.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1929.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2006.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2331.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2516.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2752.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>28808</Id>
+     <Name>
+      <Family>Larsson</Family>
+      <Given>Ingemar</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:18:31+02:00</StartTime>
+     <FinishTime>2012-09-04T19:08:48+02:00</FinishTime>
+     <Time>3017.0</Time>
+     <TimeBehind>701.0</TimeBehind>
+     <Position>5</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>77.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>181.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>287.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>442.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>614.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1180.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1420.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1499.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1698.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1941.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2010.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2092.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2419.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2604.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2834.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>2032</Id>
+     <Name>
+      <Family>Olsson</Family>
+      <Given>Johan</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:14:44+02:00</StartTime>
+     <FinishTime>2012-09-04T19:07:31+02:00</FinishTime>
+     <Time>3167.0</Time>
+     <TimeBehind>851.0</TimeBehind>
+     <Position>6</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>242.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>344.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>449.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>593.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>722.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>990.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1170.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1237.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1404.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>2223.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2270.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2333.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2648.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2812.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3009.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>91486</Id>
+     <Name>
+      <Family>Rydenius</Family>
+      <Given>Jörgen</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:09:53+02:00</StartTime>
+     <FinishTime>2012-09-04T19:02:48+02:00</FinishTime>
+     <Time>3175.0</Time>
+     <TimeBehind>859.0</TimeBehind>
+     <Position>7</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>66.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>198.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>304.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>468.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>655.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1066.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1333.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1423.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1652.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1899.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1972.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2059.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2490.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2715.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>2976.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>52725</Id>
+     <Name>
+      <Family>Kjellberg</Family>
+      <Given>Peter</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>190</Id>
+     <Name>Istrums Skidklubb</Name>
+     <ShortName>Istrums SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:46:31+02:00</StartTime>
+     <FinishTime>2012-09-04T18:39:33+02:00</FinishTime>
+     <Time>3182.0</Time>
+     <TimeBehind>866.0</TimeBehind>
+     <Position>8</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>72.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>178.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>289.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>452.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>627.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>983.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1250.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1334.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1718.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1968.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2036.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2117.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2486.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2739.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3001.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>80033</Id>
+     <Name>
+      <Family>Nilsson</Family>
+      <Given>Marie</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:04:24+02:00</StartTime>
+     <FinishTime>2012-09-04T19:00:41+02:00</FinishTime>
+     <Time>3377.0</Time>
+     <TimeBehind>1061.0</TimeBehind>
+     <Position>9</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>81.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>184.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>283.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>440.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>588.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1359.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1638.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1706.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1931.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>2219.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2280.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2349.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>2784.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2982.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3208.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>4652</Id>
+     <Name>
+      <Family>Axelsson</Family>
+      <Given>Peter</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>302</Id>
+     <Name>Orienteringklubben Ravinen</Name>
+     <ShortName>OK Ravinen</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:17:48+02:00</StartTime>
+     <FinishTime>2012-09-04T19:18:57+02:00</FinishTime>
+     <Time>3669.0</Time>
+     <TimeBehind>1353.0</TimeBehind>
+     <Position>10</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>75.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>167.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>269.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>422.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>584.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1230.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1470.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1547.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>1759.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>2497.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2557.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2644.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>3028.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>3222.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>3484.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Hurtig</Family>
+      <Given>Christina</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:13:28+02:00</StartTime>
+     <FinishTime>2012-09-04T18:26:06+02:00</FinishTime>
+     <Time>4358.0</Time>
+     <TimeBehind>2042.0</TimeBehind>
+     <Position>11</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>127.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>311.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>506.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>778.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1028.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1564.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1910.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>2041.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>2338.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>2784.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2883.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>3003.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>3547.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>3842.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>4175.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Hurtig</Family>
+      <Given>Petra</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:13:30+02:00</StartTime>
+     <FinishTime>2012-09-04T18:26:08+02:00</FinishTime>
+     <Time>4358.0</Time>
+     <TimeBehind>2042.0</TimeBehind>
+     <Position>11</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>128.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>311.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>508.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>772.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1025.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1559.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1909.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>2038.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>2327.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>2786.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2877.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>2996.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>3537.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>3832.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>4169.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Hurtig</Family>
+      <Given>Ante</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:13:27+02:00</StartTime>
+     <FinishTime>2012-09-04T18:27:00+02:00</FinishTime>
+     <Time>4413.0</Time>
+     <TimeBehind>2097.0</TimeBehind>
+     <Position>13</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>5</Id>
+      <Name>6</Name>
+      <Length>6220</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>38</ControlCode>
+      <Time>136.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>309.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>54</ControlCode>
+      <Time>503.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>55</ControlCode>
+      <Time>782.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1035.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>51</ControlCode>
+      <Time>1571.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>1908.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>2045.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>44</ControlCode>
+      <Time>2349.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>2796.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2895.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>50</ControlCode>
+      <Time>3012.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>48</ControlCode>
+      <Time>3553.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>3840.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>53</ControlCode>
+      <Time>4187.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+  </ClassResult>
+  <ClassResult>
+   <Class>
+    <Id>96</Id>
+    <Name>ÖM3</Name>
+   </Class>
+   <PersonResult>
+    <Person>
+     <Id>29506</Id>
+     <Name>
+      <Family>Forsberg</Family>
+      <Given>Oskar</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:54:21+02:00</StartTime>
+     <FinishTime>2012-09-04T19:12:48+02:00</FinishTime>
+     <Time>1107.0</Time>
+     <Position>1</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>96.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>171.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>449.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>513.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>705.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>899.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>977.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Samuelsson</Family>
+      <Given>Mattias</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:06:26+02:00</StartTime>
+     <FinishTime>2012-09-04T18:28:53+02:00</FinishTime>
+     <Time>1347.0</Time>
+     <TimeBehind>240.0</TimeBehind>
+     <Position>2</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>143.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>223.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>579.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>647.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>859.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1072.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>1218.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Höglund</Family>
+      <Given>Lovisa</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T19:01:53+02:00</StartTime>
+     <FinishTime>2012-09-04T19:28:47+02:00</FinishTime>
+     <Time>1614.0</Time>
+     <TimeBehind>507.0</TimeBehind>
+     <Position>3</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>162.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>262.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>743.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>830.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1101.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1342.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>1468.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>6080</Id>
+     <Name>
+      <Family>Perneby</Family>
+      <Given>Lars-Erik</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:46:24+02:00</StartTime>
+     <FinishTime>2012-09-04T18:18:01+02:00</FinishTime>
+     <Time>1897.0</Time>
+     <TimeBehind>790.0</TimeBehind>
+     <Position>4</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>230.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>339.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>817.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>911.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1216.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1517.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>1685.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Hansson</Family>
+      <Given>Åsa</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:12:23+02:00</StartTime>
+     <FinishTime>2012-09-04T18:44:43+02:00</FinishTime>
+     <Time>1940.0</Time>
+     <TimeBehind>833.0</TimeBehind>
+     <Position>5</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>188.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>306.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>725.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>829.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1185.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1512.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>1752.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>50453</Id>
+     <Name>
+      <Family>Forsberg</Family>
+      <Given>Maria</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:59:07+02:00</StartTime>
+     <FinishTime>2012-09-04T19:32:35+02:00</FinishTime>
+     <Time>2008.0</Time>
+     <TimeBehind>901.0</TimeBehind>
+     <Position>6</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>223.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>353.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>876.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>978.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1300.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1658.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>1840.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>28902</Id>
+     <Name>
+      <Family>Blomdahl</Family>
+      <Given>Anneli</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:14:57+02:00</StartTime>
+     <FinishTime>2012-09-04T18:49:28+02:00</FinishTime>
+     <Time>2071.0</Time>
+     <TimeBehind>964.0</TimeBehind>
+     <Position>7</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>348.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>456.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1013.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1101.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1395.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1715.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>1889.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Udén</Family>
+      <Given>Anna</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:13:22+02:00</StartTime>
+     <FinishTime>2012-09-04T18:49:42+02:00</FinishTime>
+     <Time>2180.0</Time>
+     <TimeBehind>1073.0</TimeBehind>
+     <Position>8</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>342.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>444.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1111.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1190.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1564.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1848.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>2019.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>70185</Id>
+     <Name>
+      <Family>Stensson</Family>
+      <Given>Carina</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:30:46+02:00</StartTime>
+     <FinishTime>2012-09-04T19:07:49+02:00</FinishTime>
+     <Time>2223.0</Time>
+     <TimeBehind>1116.0</TimeBehind>
+     <Position>9</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>201.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>294.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1267.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1340.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1607.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>1923.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>2070.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>17203</Id>
+     <Name>
+      <Family>Hersén</Family>
+      <Given>Ingela</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>410</Id>
+     <Name>Tullinge Sportklubb</Name>
+     <ShortName>Tullinge SK</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:23:38+02:00</StartTime>
+     <FinishTime>2012-09-04T19:05:13+02:00</FinishTime>
+     <Time>2495.0</Time>
+     <TimeBehind>1388.0</TimeBehind>
+     <Position>10</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>371.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>498.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1302.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1404.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1741.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>2137.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>2328.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Mårtensson</Family>
+      <Given>Johan</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:00:32+02:00</StartTime>
+     <FinishTime>2012-09-04T18:44:01+02:00</FinishTime>
+     <Time>2609.0</Time>
+     <TimeBehind>1502.0</TimeBehind>
+     <Position>11</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>244.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>405.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1254.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1377.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1729.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>2196.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>2379.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Id>4562</Id>
+     <Name>
+      <Family>Sandvik</Family>
+      <Given>Lars</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Id>302</Id>
+     <Name>Orienteringklubben Ravinen</Name>
+     <ShortName>OK Ravinen</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T17:16:04+02:00</StartTime>
+     <FinishTime>2012-09-04T18:01:23+02:00</FinishTime>
+     <Time>2719.0</Time>
+     <TimeBehind>1612.0</TimeBehind>
+     <Position>12</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>307.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>446.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1393.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>1525.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>1942.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>2336.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>2541.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Toth</Family>
+      <Given>Peter</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:35:08+02:00</StartTime>
+     <FinishTime>2012-09-04T19:40:10+02:00</FinishTime>
+     <Time>3902.0</Time>
+     <TimeBehind>2795.0</TimeBehind>
+     <Position>13</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>824.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>968.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1898.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2046.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2551.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>3033.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>3683.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Burell</Family>
+      <Given>Johannes</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:34:52+02:00</StartTime>
+     <FinishTime>2012-09-04T19:40:08+02:00</FinishTime>
+     <Time>3916.0</Time>
+     <TimeBehind>2809.0</TimeBehind>
+     <Position>14</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>834.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>979.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1898.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2071.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2565.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>3046.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>3697.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Havjar</Family>
+      <Given>Veronica</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:35:21+02:00</StartTime>
+     <FinishTime>2012-09-04T19:46:29+02:00</FinishTime>
+     <Time>4268.0</Time>
+     <TimeBehind>3161.0</TimeBehind>
+     <Position>15</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>772.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1073.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1887.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2055.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2672.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>3153.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>4095.0</Time>
+     </SplitTime>
+    </Result>
+   </PersonResult>
+   <PersonResult>
+    <Person>
+     <Name>
+      <Family>Burell</Family>
+      <Given>Ingrid</Given>
+     </Name>
+    </Person>
+    <Organisation>
+     <Name>Klubblös</Name>
+     <ShortName>Klubblös</ShortName>
+     <Country code="SWE"></Country>
+    </Organisation>
+    <Result raceNumber="1">
+     <StartTime>2012-09-04T18:34:54+02:00</StartTime>
+     <FinishTime>2012-09-04T19:46:27+02:00</FinishTime>
+     <Time>4293.0</Time>
+     <TimeBehind>3186.0</TimeBehind>
+     <Position>16</Position>
+     <Status>OK</Status>
+     <Course>
+      <Id>2</Id>
+      <Name>3</Name>
+      <Length>3160</Length>
+     </Course>
+     <SplitTime>
+      <ControlCode>33</ControlCode>
+      <Time>802.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>39</ControlCode>
+      <Time>1097.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>40</ControlCode>
+      <Time>1917.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>41</ControlCode>
+      <Time>2077.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>42</ControlCode>
+      <Time>2694.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>36</ControlCode>
+      <Time>3177.0</Time>
+     </SplitTime>
+     <SplitTime>
+      <ControlCode>43</ControlCode>
+      <Time>4125.0</Time>
+     </SplitTime>
     </Result>
    </PersonResult>
   </ClassResult>

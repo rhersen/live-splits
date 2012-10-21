@@ -1,5 +1,6 @@
 package name.hersen.livesplits;
 
+import org.joda.time.Duration;
 import org.joda.time.Period;
 
 import java.util.Collection;
@@ -8,7 +9,7 @@ import java.util.List;
 
 public class Competitor {
     private final String name;
-    private final Period time;
+    private final Duration time;
     private final String status;
     private final Collection<Split> splits;
     private final String id;
@@ -27,14 +28,14 @@ public class Competitor {
     }
 
     public Period getTime() {
-        return time;
+        return time == null ? null : time.toPeriod();
     }
 
     public Collection<Split> getSplits() {
         return splits;
     }
 
-    public Competitor(String name, Period time, String status, List<Split> splits, String id, Deque<String> laps) {
+    public Competitor(String name, Duration time, String status, List<Split> splits, String id, Deque<String> laps) {
         this.name = name;
         this.time = time;
         this.status = status;
