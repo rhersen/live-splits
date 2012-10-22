@@ -3,21 +3,13 @@ package name.hersen.livesplits;
 import java.util.List;
 
 public class ClassResult {
-    private String name;
+    private final String name;
 
-    private List<FormattedCompetitor> list;
+    private final List<FormattedCompetitor> list;
 
     public ClassResult(String name, List<FormattedCompetitor> list) {
         this.name = name;
         this.list = list;
-    }
-
-    @Override
-    public String toString() {
-        return "ClassResult{" +
-                "name='" + name + '\'' +
-                ", list=" + list +
-                '}';
     }
 
     public String getName() {

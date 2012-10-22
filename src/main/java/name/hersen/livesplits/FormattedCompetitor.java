@@ -18,14 +18,6 @@ public class FormattedCompetitor {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return "Competitor{" +
-                "name='" + name + '\'' +
-                ", time='" + time + '\'' +
-                '}';
-    }
-
     public String getTime() {
         return time;
     }

@@ -5,7 +5,6 @@ import org.joda.time.Period;
 
 import java.util.Collection;
 import java.util.Deque;
-import java.util.List;
 
 public class Competitor {
     private final String name;
@@ -19,14 +18,6 @@ public class Competitor {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return "Competitor{" +
-                "name='" + name + '\'' +
-                ", time='" + time + '\'' +
-                '}';
-    }
-
     public Period getTime() {
         return time == null ? null : time.toPeriod();
     }
@@ -35,7 +26,7 @@ public class Competitor {
         return splits;
     }
 
-    public Competitor(String name, Duration time, String status, List<Split> splits, String id, Deque<String> laps) {
+    public Competitor(String name, Duration time, String status, Collection<Split> splits, String id, Deque<String> laps) {
         this.name = name;
         this.time = time;
         this.status = status;

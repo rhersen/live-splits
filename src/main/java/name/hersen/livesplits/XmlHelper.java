@@ -51,8 +51,8 @@ public class XmlHelper {
         return null;
     }
 
-    String getFullName(Node n) {
-        return getText(getChild(n, "Given")) + " " + getText(getChild(n, "Family"));
+    String getFullName(Node node) {
+        return getText(getChild(node, "Given")) + ' ' + getText(getChild(node, "Family"));
     }
 
     Iterable<Node> getChildrenWithName(Node parent, String nodeName) {

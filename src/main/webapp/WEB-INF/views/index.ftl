@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h2>Natt-KM för ungdomar 23 oktober</h2>
+<h2>Natt-KM för ungdomar 23 oktober 2012</h2>
 
 <ol>
     <li>

@@ -15,15 +15,16 @@ import java.util.Deque;
 
 @Service
 public class CourseParser {
-    @Autowired XmlHelper xml;
+    @Autowired
+    private XmlHelper xmlHelper;
 
     public Deque<Control> parseCourseData(Reader xml) throws IOException, SAXException {
-        return getControls(this.xml.createParser(xml));
+        return getControls(xmlHelper.createParser(xml));
     }
 
     private Deque<Control> getControls(DOMParser p) {
-        Deque<Node> courseData = xml.getChildren(p.getDocument().getElementsByTagName("CourseData"));
-        Collection<Node> children = xml.getChildren(courseData.getFirst());
+        Deque<Node> courseData = xmlHelper.getChildren(p.getDocument().getElementsByTagName("CourseData"));
+        Collection<Node> children = xmlHelper.getChildren(courseData.getFirst());
         Deque<Control> r = new ArrayDeque<Control>();
         r.addAll(findControls(children, "StartPoint", "StartPointCode"));
         r.addAll(findControls(children, "Control", "ControlCode"));
@@ -34,16 +35,16 @@ public class CourseParser {
     private Collection<Control> findControls(Iterable<Node> children, String parent, String child) {
         Collection<Control> r = new ArrayDeque<Control>();
         for (Node control : children) {
-            if (xml.hasNodeName(control, parent)) {
+            if (xmlHelper.hasNodeName(control, parent)) {
                 r.add(createControl(control, child));
             }
         }
         return r;
     }
 
-    private Control createControl(Node n, String name) {
-        String code = xml.getText(xml.getChild(n, name)).trim();
-        NamedNodeMap attributes = xml.getChild(n, "MapPosition").getAttributes();
+    private Control createControl(Node node, String name) {
+        String code = xmlHelper.getText(xmlHelper.getChild(node, name)).trim();
+        NamedNodeMap attributes = xmlHelper.getChild(node, "MapPosition").getAttributes();
         double x = getCoordinate(attributes, "x");
         double y = getCoordinate(attributes, "y");
         return new Control(code, x, y);

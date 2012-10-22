@@ -12,6 +12,7 @@ import java.util.Collection;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.springframework.test.util.ReflectionTestUtils.setField;
 
 public class ResultParserTest {
 
@@ -24,12 +25,12 @@ public class ResultParserTest {
         ResultFormatter resultFormatter = new ResultFormatter();
 
         CourseParser courseParser = new CourseParser();
-        courseParser.xml = xmlHelper;
+        setField(courseParser, "xmlHelper", xmlHelper);
 
         target = new ResultParser();
-        target.xml = xmlHelper;
-        target.courseParser = courseParser;
-        target.resultFormatter = resultFormatter;
+        setField(target, "xml", xmlHelper);
+        setField(target, "courseParser", courseParser);
+        setField(target, "resultFormatter", resultFormatter);
     }
 
     @Test

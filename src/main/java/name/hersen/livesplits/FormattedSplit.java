@@ -10,7 +10,9 @@ public class FormattedSplit {
 
     public FormattedSplit(Period time, Control control) {
         this.control = control;
-        if (!time.equals(Period.ZERO)) {
+        if (time.equals(Period.ZERO)) {
+            this.time = "";
+        } else {
             PeriodFormatter formatter = new PeriodFormatterBuilder()
                     .appendHours()
                     .appendSeparatorIfFieldsBefore(".")
@@ -21,8 +23,6 @@ public class FormattedSplit {
                     .appendSeconds()
                     .toFormatter();
             this.time = time.toString(formatter);
-        } else {
-            this.time = "";
         }
     }
 

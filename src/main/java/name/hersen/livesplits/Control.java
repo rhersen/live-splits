@@ -1,9 +1,9 @@
 package name.hersen.livesplits;
 
 public class Control {
-    private String code;
-    private double x;
-    private double y;
+    private final String code;
+    private final double x;
+    private final double y;
 
     public Control(String code, double x, double y) {
         this.code = code;
@@ -23,12 +23,4 @@ public class Control {
         return y;
     }
 
-    @Override
-    public String toString() {
-        return "Control{" +
-                "code='" + code + '\'' +
-                ", x=" + x +
-                ", y=" + y +
-                '}';
-    }
 }

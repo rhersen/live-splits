@@ -17,11 +17,14 @@ import java.util.*;
 public class ResultParser {
 
     private final PeriodFormatter periodParser;
-    @Autowired XmlHelper xml;
-    @Autowired CourseParser courseParser;
-    @Autowired ResultFormatter resultFormatter;
+    @Autowired
+    private XmlHelper xml;
+    @Autowired
+    private CourseParser courseParser;
+    @Autowired
+    private ResultFormatter resultFormatter;
     private final PeriodFormatter periodFormatter;
-    private long sequence;
+    private long sequence = 0L;
 
     public ResultParser() {
         periodParser = new PeriodFormatterBuilder().appendSeconds().appendSeparator(".").appendLiteral("0").toFormatter();
@@ -43,17 +46,17 @@ public class ResultParser {
 
     private Collection<ClassResult> getClassResults(DOMParser p, Deque<Control> controls) {
         Collection<ClassResult> r = new ArrayDeque<ClassResult>();
-        for (Node n : xml.getChildren(p.getDocument().getElementsByTagName("ClassResult"))) {
-            r.add(createClassResult(n, controls));
+        for (Node node : xml.getChildren(p.getDocument().getElementsByTagName("ClassResult"))) {
+            r.add(createClassResult(node, controls));
         }
         return r;
     }
 
     private ClassResult createClassResult(Node classResult, Deque<Control> controls) {
         List<FormattedCompetitor> competitors = new ArrayList<FormattedCompetitor>();
-        for (Node n : xml.getChildren(classResult)) {
-            if (xml.hasNodeName(n, "PersonResult")) {
-                competitors.add(resultFormatter.format(getCompetitor(n, controls)));
+        for (Node node : xml.getChildren(classResult)) {
+            if (xml.hasNodeName(node, "PersonResult")) {
+                competitors.add(resultFormatter.format(getCompetitor(node, controls)));
             }
         }
         String classShortName = xml.getText(xml.getChild(xml.getChild(classResult, "Class"), "Name"));
@@ -68,7 +71,7 @@ public class ResultParser {
         String status = xml.getText(xml.getChild(result, "Status"));
         double totalSeconds = t != null ? Double.valueOf(t) : 0.0;
         Duration total = Duration.standardSeconds((long) totalSeconds);
-        Duration time = t != null ? total : null;
+        Duration time = total.equals(Duration.ZERO) ? null : total;
 
         List<Split> splits = getAllSplits(result, controls, total.toPeriod());
         String id = getId(person);
@@ -81,22 +84,22 @@ public class ResultParser {
     private String getId(Node person) {
         Node id = xml.getChild(person, "Id");
         if (id == null) {
-            return "" + (++sequence);
+            return String.valueOf(++sequence);
         }
         return id.getTextContent();
     }
 
     private List<Split> getAllSplits(Node parent, Deque<Control> controls, Period total) {
         List<Split> r = new ArrayList<Split>();
-        Duration p = new Duration(0);
+        Duration p = new Duration(0L);
         r.add(new Split(controls.getFirst(), p.toPeriod()));
-        for (Node n : xml.getChildrenWithName(parent, "SplitTime")) {
-            Node t = xml.getChild(n, "Time");
+        for (Node node : xml.getChildrenWithName(parent, "SplitTime")) {
+            Node t = xml.getChild(node, "Time");
             if (t != null) {
                 String textContent = t.getTextContent();
                 p = Duration.standardSeconds((long) Double.parseDouble(textContent));
-                Control c = findByControlCode(controls, xml.getChild(n, "ControlCode").getTextContent());
-                r.add(new Split(c, p.toPeriod()));
+                Control control = findByControlCode(controls, xml.getChild(node, "ControlCode").getTextContent());
+                r.add(new Split(control, p.toPeriod()));
             }
         }
         r.add(new Split(controls.getLast(), total));
@@ -113,7 +116,7 @@ public class ResultParser {
 
     private Iterable<Period> getLaps0(Node parent, Period total) {
         Collection<Period> r = new ArrayDeque<Period>();
-        Period current = new Period(0);
+        Period current = new Period(0L);
         Period previous = current;
         for (Node splitTime : xml.getChildrenWithName(parent, "SplitTime")) {
             Node time = xml.getChild(splitTime, "Time");

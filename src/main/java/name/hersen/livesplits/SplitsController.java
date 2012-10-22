@@ -20,6 +20,7 @@ import java.util.Collection;
 public class SplitsController implements ServletContextAware {
 
     @Autowired
+    private
     ResultParser parser;
     private ServletContext servletContext;
 
