@@ -105,7 +105,7 @@ public class ResultParserTest {
         assertEquals("22.27", split.getTime());
 
         split = gs(competitor).get(0);
-        assertEquals("00", split.getTime());
+        assertEquals("", split.getTime());
         control = split.getControl();
         assertEquals("S1", control.getCode());
 

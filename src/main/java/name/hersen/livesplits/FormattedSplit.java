@@ -10,20 +10,20 @@ public class FormattedSplit {
 
     public FormattedSplit(Period time, Control control) {
         this.control = control;
-        PeriodFormatter formatter = new PeriodFormatterBuilder()
-                .appendHours()
-                .appendSeparatorIfFieldsBefore(".")
-                .appendMinutes()
-                .appendSeparator(".")
-                .minimumPrintedDigits(2)
-                .printZeroAlways()
-                .appendSeconds()
-                .toFormatter();
-        this.time = time.toString(formatter);
-    }
-
-    public FormattedSplit(Split split) {
-        this(split.getTime(), split.getControl());
+        if (!time.equals(Period.ZERO)) {
+            PeriodFormatter formatter = new PeriodFormatterBuilder()
+                    .appendHours()
+                    .appendSeparatorIfFieldsBefore(".")
+                    .appendMinutes()
+                    .appendSeparator(".")
+                    .minimumPrintedDigits(2)
+                    .printZeroAlways()
+                    .appendSeconds()
+                    .toFormatter();
+            this.time = time.toString(formatter);
+        } else {
+            this.time = "";
+        }
     }
 
     public String getTime() {

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h2>Ungdomsserien Söder 15 maj</h2>
+<h2>Natt-KM för ungdomar 23 oktober</h2>
 
 <ol>
     <li>
