@@ -24,7 +24,7 @@ public class ResultParser {
     @Autowired
     private ResultFormatter resultFormatter;
     private final PeriodFormatter periodFormatter;
-    private long sequence = 0L;
+    private long sequence;
 
     public ResultParser() {
         periodParser = new PeriodFormatterBuilder().appendSeconds().appendSeparator(".").appendLiteral("0").toFormatter();

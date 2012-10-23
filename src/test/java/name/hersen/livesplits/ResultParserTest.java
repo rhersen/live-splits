@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -40,17 +41,17 @@ public class ResultParserTest {
 
         ClassResult m5 = classes.get(0);
         assertEquals("ÖM4", m5.getName());
-        assertEquals("Mattias Klintemar", m5.getList().get(0).getName());
-        FormattedCompetitor competitor = m5.getList().get(2);
+        assertEquals("Mattias Klintemar", getList(m5).get(0).getName());
+        FormattedCompetitor competitor = getList(m5).get(2);
         assertEquals("Tommy Johansson", competitor.getName());
         assertEquals("MissingPunch", competitor.getTime());
 
         ClassResult m3 = classes.get(1);
         assertEquals("ÖM5", m3.getName());
-        assertEquals("Jessica Sjöberg", m3.getList().get(0).getName());
-        assertEquals("Anders Kärrström", m3.getList().get(2).getName());
+        assertEquals("Jessica Sjöberg", getList(m3).get(0).getName());
+        assertEquals("Anders Kärrström", getList(m3).get(2).getName());
     }
-    
+
     @Test
     public void splits() throws Exception {
         List<ClassResult> classes = testParseResultList("splits-v3.xml");
@@ -58,23 +59,29 @@ public class ResultParserTest {
 
         ClassResult h16 = classes.get(0);
         assertEquals("ÖM4", h16.getName());
-        assertEquals("Tommy Johansson", h16.getList().get(2).getName());
-        assertEquals("MissingPunch", h16.getList().get(2).getTime());
-        assertEquals("Irene Knutar", h16.getList().get(1).getName());
-        assertEquals("35.08", h16.getList().get(1).getTime());
+        assertEquals("Tommy Johansson", getList(h16).get(2).getName());
+        assertEquals("MissingPunch", getList(h16).get(2).getTime());
+        assertEquals("Irene Knutar", getList(h16).get(1).getName());
+        assertEquals("35.08", getList(h16).get(1).getTime());
 
         ClassResult d16 = classes.get(1);
         assertEquals("ÖM5", d16.getName());
-        assertEquals("Anders Kärrström", d16.getList().get(2).getName());
-        assertEquals("Magnus Bolander", d16.getList().get(3).getName());
-        assertEquals("36.04", d16.getList().get(3).getTime());
+        assertEquals("Anders Kärrström", getList(d16).get(2).getName());
+        assertEquals("Magnus Bolander", getList(d16).get(3).getName());
+        assertEquals("36.04", getList(d16).get(3).getTime());
 
         ClassResult l = classes.get(3);
-        assertEquals("Magnus Eriksson", l.getList().get(2).getName());
-        FormattedCompetitor competitor = l.getList().get(1);
+        assertEquals("Magnus Eriksson", getList(l).get(2).getName());
+        FormattedCompetitor competitor = getList(l).get(1);
         assertEquals("Manfred Axelsson", competitor.getName());
         assertEquals("41.50", competitor.getTime());
         assertEquals("5.48", gs(competitor).get(4).getTime());
+    }
+
+    private LinkedList<FormattedCompetitor> getList(ClassResult m5) {
+        Collection<FormattedCompetitor> list = m5.getList();
+        LinkedList<FormattedCompetitor> r = new LinkedList<FormattedCompetitor>(list);
+        return r;
     }
 
     private ArrayList<FormattedSplit> gs(FormattedCompetitor competitor) {
@@ -87,8 +94,8 @@ public class ResultParserTest {
         assertEquals(5, classes.size());
 
         ClassResult d10 = classes.get(4);
-        assertEquals("Oskar Forsberg", d10.getList().get(0).getName());
-        FormattedCompetitor competitor = d10.getList().get(1);
+        assertEquals("Oskar Forsberg", getList(d10).get(0).getName());
+        FormattedCompetitor competitor = getList(d10).get(1);
         assertEquals("Mattias Samuelsson", competitor.getName());
         assertEquals("25", competitor.getId());
         assertEquals("22.27", competitor.getTime());
@@ -121,7 +128,7 @@ public class ResultParserTest {
         assertEquals(5, classes.size());
 
         ClassResult d10 = classes.get(4);
-        FormattedCompetitor competitor = d10.getList().get(1);
+        FormattedCompetitor competitor = getList(d10).get(1);
         List<String> laps = new ArrayList<String>(competitor.getLaps());
         assertEquals("1.08", laps.get(3));
         assertEquals("3.32", laps.get(4));

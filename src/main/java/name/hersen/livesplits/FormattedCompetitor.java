@@ -4,15 +4,17 @@ import org.joda.time.Period;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 
-import java.util.Deque;
+import java.util.ArrayDeque;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class FormattedCompetitor {
     private final String id;
     private final String name;
     private final String time;
-    private final List<FormattedSplit> splits;
-    private final Deque<String> laps;
+    private final Collection<FormattedSplit> splits;
+    private final Collection<String> laps;
 
     public String getName() {
         return name;
@@ -22,11 +24,11 @@ public class FormattedCompetitor {
         return time;
     }
 
-    public FormattedCompetitor(String id, String name, Period time, String status, List<FormattedSplit> splits, Deque<String> laps) {
+    public FormattedCompetitor(String id, String name, Period time, String status, List<FormattedSplit> splits, Collection<String> laps) {
         this.id = id;
         this.name = name;
-        this.splits = splits;
-        this.laps = laps;
+        this.splits = new ArrayDeque<FormattedSplit>(splits);
+        this.laps = new ArrayDeque<String>(laps);
 
         PeriodFormatter formatter = new PeriodFormatterBuilder()
                 .appendHours()
@@ -41,15 +43,15 @@ public class FormattedCompetitor {
         this.time = time == null ? status : time.toString(formatter);
     }
 
-    public List<FormattedSplit> getSplits() {
-        return splits;
+    public Collection<FormattedSplit> getSplits() {
+        return Collections.unmodifiableCollection(splits);
     }
 
     public String getId() {
         return id;
     }
 
-    public Deque<String> getLaps() {
-        return laps;
+    public Collection<String> getLaps() {
+        return Collections.unmodifiableCollection(laps);
     }
 }

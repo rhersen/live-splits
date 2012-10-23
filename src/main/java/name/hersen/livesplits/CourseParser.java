@@ -42,12 +42,16 @@ public class CourseParser {
         return r;
     }
 
-    private Control createControl(Node node, String name) {
-        String code = xmlHelper.getText(xmlHelper.getChild(node, name)).trim();
+    private Control createControl(Node node, String type) {
+        String code = getCode(node, type);
         NamedNodeMap attributes = xmlHelper.getChild(node, "MapPosition").getAttributes();
         double x = getCoordinate(attributes, "x");
         double y = getCoordinate(attributes, "y");
         return new Control(code, x, y);
+    }
+
+    private String getCode(Node node, String type) {
+        return xmlHelper.getText(xmlHelper.getChild(node, type)).trim();
     }
 
     private double getCoordinate(NamedNodeMap attributes, String coordinateName) {
