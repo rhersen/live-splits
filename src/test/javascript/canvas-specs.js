@@ -111,7 +111,7 @@ describe('canvas', function() {
         expect(yMin).toBeLessThan(320);
         expect(yMax).toBeGreaterThan(320);
         expect(yMax).toBeLessThan(640);
-        expect(nCalls).toBe(3);
+        expect(nCalls).toBe(4);
     });
 
     it("should draw circles", function() {
@@ -148,7 +148,26 @@ describe('canvas', function() {
         ],
         "laps":[]});
         expect(nLines).toBe(4);
-        expect(nTexts).toBe(5);
+        expect(nTexts).toBe(6);
+    });
+
+    it("should draw name", function() {
+        var name;
+        var actualX;
+        var contextMock = createContextMock();
+        contextMock.lineTo = function () { };
+        contextMock.fillText = function (text, x, y) {
+            if (!name) {
+                name = text;
+                actualX = x;
+            }
+        };
+        draw(createCanvasMock(contextMock), {"name":"Tilda Andersson","id":"23493","time":"20.05","splits":[
+            {"time":"20.05","control":{"x":3129.6,"y":2671.05,"code":"M1"}}
+        ],
+        "laps":[]});
+        expect(name).toBe("Tilda Andersson");
+        expect(actualX).toBe(200);
     });
 
 });

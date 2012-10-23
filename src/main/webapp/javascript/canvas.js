@@ -58,6 +58,16 @@ function draw(canvas, competitor) {
         }
     );
 
+    function setNameFont() {
+        c.font = size * 2 + 'px sans-serif';
+        c.textAlign = 'center';
+        c.textBaseline = 'middle';
+        c.fillStyle = 'lightgray';
+    }
+
+    setNameFont();
+    c.fillText(competitor.name, canvas.width / 4, size * 2);
+
     setFont();
 
     each(competitor.splits, function (split) {
@@ -159,7 +169,7 @@ function init(id) {
     handleResize();
 
     function run() {
-        $.ajax({url: "splits?id=" + id, cache: false, success: handleSuccess, error: handleError});
+        $.ajax({url:"splits?id=" + id, cache:false, success:handleSuccess, error:handleError});
     }
 
     function handleSuccess(c) {
